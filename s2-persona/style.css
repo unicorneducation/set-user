@@ -1,0 +1,39 @@
+.module {
+    width: 960px;
+    height: 600px;
+    border: 2px solid #ccc;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    font-family: 'IBM Plex Mono';
+}
+
+.helpArea {
+    grid-column: 6 / span 3;
+    border-left: 1px solid #aaa;
+    padding: 16px;
+    line-break: loose;  
+}
+
+.picture {
+    grid-column: 3 / span 2;
+    margin-top: 100px;
+}
+
+nav {
+    grid-column: 1 / span 6;
+    height: 32px;
+    align-self: end;
+}
+
+.module_content {
+    grid-column: 1 / span 5;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.nav_button {
+    float: left;
+    width: 50%;
+    text-align: center; 
+    bottom: 0;
+}
