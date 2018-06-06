@@ -5,22 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>User Session 1 Intro</title>
-  <script src="../src/p5.js"></script>
-  <script src="../src/p5.dom.js"></script>
-  <script src="../s1-kinderwagen/s1-module-kinderwagen.js"></script>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
-
-    div {
-      float: right;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <div class="left"></div>
+  <div class="right">
+    <!--Make sure the form has the autocomplete function switched off:-->
+    <form autocomplete="off" class="auto-flex">
+      <div class="autocomplete">
+        <input id="myInput" type="text" placeholder="Features">
+      </div>
+      <input type="button" id="select" value="Auswählen">
+    </form>
+
+    <div class="list">
+      <ul id="feat"></ul>
+    </div>
+  </div>
+
+  <script src="../src/jquery.min.js"></script>
+  <script src="../s1-kinderwagen/index.js"></script>
+  <script>
+    autocomplete(document.getElementById("myInput"), countries);
+
+    $(function () {
+
+      submitSelection();
+    });
+  </script>
 
 </body>
 
