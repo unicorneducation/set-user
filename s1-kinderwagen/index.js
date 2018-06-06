@@ -17,7 +17,18 @@ function submitSelection() {
     // } else {
     //   console.log("Sorry");
     // }
+
+    var featNum = $('#feat').children().toArray();
+    featNum = featNum.length
+    if (featNum < 3) {
+      $('.left img').attr('src', "../src/buggy1.jpg");
+    } else if (featNum >= 3 && featNum < 5) {
+      $('.left img').attr('src', "../src/buggy2.jpg");
+    } else if (featNum >= 5) {
+      $('.left img').attr('src', "../src/buggy3.jpg");
+    }
   })
+
 }
 
 

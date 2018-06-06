@@ -9,14 +9,16 @@
 </head>
 
 <body>
-  <div class="left"></div>
+  <div class="left">
+    <img src="../src/buggy1.jpg" alt="">
+  </div>
   <div class="right">
     <!--Make sure the form has the autocomplete function switched off:-->
     <form autocomplete="off" class="auto-flex">
       <div class="autocomplete">
         <input id="myInput" type="text" placeholder="Features">
       </div>
-      <input type="button" id="select" value="Auswählen">
+      <input type="button" id="select" value="Hinzufügen">
     </form>
 
     <div class="list">
@@ -27,9 +29,8 @@
   <script src="../src/jquery.min.js"></script>
   <script src="../s1-kinderwagen/index.js"></script>
   <script>
-    autocomplete(document.getElementById("myInput"), countries);
-
     $(function () {
+      autocomplete(document.getElementById("myInput"), countries);
 
       submitSelection();
     });

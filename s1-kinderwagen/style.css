@@ -16,6 +16,10 @@ body {
   background-color: #f5f5f5;
 }
 
+.left img {
+  width: 100%;
+}
+
 .right {
   float: left;
   width: 40%;
