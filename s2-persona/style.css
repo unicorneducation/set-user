@@ -1,39 +1,151 @@
+body {
+    background: #fafafa;
+}
+
+/* LAYOUT */
+
 .module {
     width: 960px;
     height: 600px;
-    border: 2px solid #ccc;
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    /* border: 2px solid #ccc; */
     font-family: 'IBM Plex Mono';
+    margin: 25px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    background: white;
 }
 
 .helpArea {
     grid-column: 6 / span 3;
-    border-left: 1px solid #aaa;
     padding: 16px;
     line-break: loose;  
 }
 
-.picture {
-    grid-column: 3 / span 2;
-    margin-top: 100px;
-}
-
 nav {
-    grid-column: 1 / span 6;
+    grid-column: 1 / span 8;
     height: 32px;
+    line-height: 32px;
     align-self: end;
 }
 
-.module_content {
-    grid-column: 1 / span 5;
+.module_screen {
+    grid-column: 1 / span all;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(8, 1fr);
+    height: 568px;
 }
+
+.module {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+
+/* NAVIGATION */
 
 .nav_button {
     float: left;
     width: 50%;
     text-align: center; 
     bottom: 0;
+    cursor: pointer;
+}
+
+.button_back {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.button_back:hover {
+    color: rgba(0, 0, 0, 1);
+}
+
+#one {
+    transition: all ease-out 0.3s;
+}
+
+#two, #three, #four, #five, #six, #final {
+    display: none;
+}
+
+/* PICTURE */
+
+#pic {
+    height: 200px;
+    width: 200px;
+}
+
+.picture .helpArea {    
+    height: fit-content;
+    background: rgba(0, 0, 0, 0.2);
+    color: white;    
+}
+
+#one {
+    background: center url(https://images.unsplash.com/photo-1515736123553-9c5276c4ef34?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a59b6b47ddd9a15ba1f7f2039e1bce10&auto=format&fit=crop&w=2134&q=80);
+    background-size: cover;
+}
+
+.picture_nav_container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.picture_nav_prev {
+    cursor: pointer;
+    grid-column: 2 / span 1;
+}
+
+.picture_nav_next {
+    cursor: pointer;
+    grid-column: 4 / span 1;
+}
+
+/* NAME */
+
+.name_input {
+    height: 48px;
+    border: 0px;
+    border-bottom: 5px solid;  
+    grid-column: 2 / span 3;
+    align-self: center;
+    font-size: 2em;
+}
+
+input:focus, textarea:focus {outline:none;}
+
+/* FACTS */
+
+.input_activities {
+    border: 0px;
+    width: 100%;
+    margin-top: 64px;
+    height: 356px;
+    font-size: 16px;
+    font-family: 'IBM Plex Mono';
+}
+
+.activities .content {
+    grid-column: 2 / span 3;
+    padding: 16px;
+    overflow: hidden;
+}
+
+/* FINAL */
+
+#pic {
+    grid-column: 2 / span 2;
+}
+
+#name {
+    grid-column: 6 / span 4;
+}
+
+#bio {
+    grid-column: 
+}
+
+.complete .content {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-column: 1 / span 5;
+    padding: 16px 0px;
 }
