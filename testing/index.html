@@ -1,0 +1,176 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Unicorn Education | Set: User | Usability Test</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../s2-persona/style.css">
+    <script src="../s2-persona/s2-module-persona-v2.js"></script>
+</head>
+
+<body>
+
+    <section class="content" id="c1">
+        <div class="space_top"></div>
+        <h2>Unicorn Education | Usability Test</h2>
+        <h1>Set: User</h1>
+        <div class="text">
+            <p>
+                In jedem Projekt das entwickelt wird, geht es immer darum, für wen man eigentlich das Projekt gestaltet. Man stellt sich
+                von Anfang an die Frage: Wer ist der spätere Endnutzer unseres Produkts oder Services? Und genau darum geht
+                es in dieser Session.
+            </p>
+            <p>
+                Du bist in der glorreichen Situation einen Auftrag von einem Hersteller bekommen zu haben, den smarten Kinderwagen der Zukunft
+                zu entwickeln und auf den Markt zu bringen. Dieser darf ganz nach deinen Vorstellungen entstehen. Der Vorstand
+                vertraut dir dabei, da Du ein guter Designer bist und sie viel von Dir halten.
+            </p>
+            <p>
+                Lege los und erstelle eine Feature Liste von Dingen an, die du denkst, die einen smarten Kinderwagen der Zukunft hineingehören.
+                Ein paar Punkte stehen schon in der Liste, füge über das Eingabefeld noch weitere hinzu.</p>
+        </div>
+        <div onclick="nextContent()" class="next button">Alles klar!</div>
+    </section>
+
+    <section class="content" id="c2">
+        <div class="space_top"></div>
+        <div class="left">
+            <img src="../src/buggy1.jpg" alt="">
+        </div>
+        <div class="right">
+            <!--Make sure the form has the autocomplete function switched off:-->
+            <form autocomplete="off" class="auto-flex">
+                <div class="autocomplete">
+                    <input id="myInput" type="text" placeholder="Features">
+                </div>
+                <input type="button" id="select" value="Hinzufügen">
+            </form>
+
+            <div class="list">
+                <ul id="feat"></ul>
+            </div>
+        </div>
+
+        <script src="../src/jquery.min.js"></script>
+        <script src="../s1-kinderwagen/index.js"></script>
+        <script>
+            $(function () {
+                autocomplete(document.getElementById("myInput"), countries);
+
+                submitSelection();
+            });
+        </script>
+        <div onclick="nextContent()" class="next button">Fertig?</div>
+    </section>
+
+    <section class="content" id="c3">
+        <div class="space_top"></div>
+        <div class="text">
+            <p>
+                So eine Liste von Features ist wichtig um sich einen Scope zu setzen, der zeigt wo das Projekt am besten enden soll. Aber
+                betrachte diese Liste doch mal genauer und achte dabei auf die Sinnhaftigkeit dieses Features und ob der
+                spätere Nutzer dies wirklich benötigt. Wo wir bei der Frage sind: Wer ist eigentlich unserer späterer Nutzer?
+            </p>
+            <p>
+                Hast du dir bei der Erstellung der Liste darüber Gedanken gemacht, wer später den Kinderwagen benutzen wird? Eine einfache
+                Aussage wie "Mütter" zählt dabei nicht, da es unendlich verschiedene Persönlichkeiten gibt.
+            </p>
+            <p>Versuche doch erst einmal festzuhalten, wie ein durchschnittlicher Nutzer aussehen könnte. Was motiviert ihn?
+                Wie gestaltet sich sein Leben? Für diesen Schritt gibt es Personas.</p>
+        </div>
+        <div onclick="nextContent()" class="next button">Hä? Personas?</div>
+    </section>
+
+    <section class="content" id="c4">
+        <div class="space_top"></div>
+        <section class="module">
+            <div class="module_screen picture" id="one">
+                <div class="helpArea">
+                    <h1>Das Bild</h1>
+                    <p>Eines der Hauptmerkmale der Persona ist ein Bild. Dieses Bild sollte dir direkt einen Eindruck geben,
+                        um was für einen Nutzer es sich handelt.
+                    </p>
+                    <div class="picture_nav_container">
+                        <span onclick="switchPicture(-1)" class="picture_nav_prev">zurück</span>
+                        <span onclick="switchPicture(1)" class="picture_nav_next">weiter</span>
+                    </div>
+                </div>
+            </div>
+            <div class="module_screen name" id="two">
+                <input class="name_input" id="input_name" type="text" placeholder="Max Mustermann" />
+                <div class="helpArea">
+                    <h1>Der Name</h1>
+                    <p>Wie heißt die Person? Der Name sollte zum Alter und der Herkunft passen.
+                    </p>
+                </div>
+            </div>
+            <div class="module_screen activities" id="three">
+                <div class="content">
+                    <h1>Das Leben von
+                        <span id="facts_name"></span>
+                    </h1>
+                    <textarea id="input_activities" class="input_activities" placeholder="Er ist 28 Jahre. Wohnt alleine in einer Kleinstadt..."></textarea>
+                </div>
+                <div class="helpArea">
+                    <h1>Actitvities & Facts</h1>
+                    <p>Mit was beschäftigt sich unsere Persona? Wie sieht sein Alltag aus? Auch scheinbar unwichtige Dinge wie
+                        das Lieblingsessen können helfen, ein bessers Bild des Nutzers zu zeichnen.
+                    </p>
+                </div>
+            </div>
+            <div class="module_screen complete" id="final">
+                <div class="content">
+                    <div id="pic"></div>
+                    <h1 id="name"></h1>
+                    <p id="bio"></p>
+                </div>
+                <div class="helpArea">
+                    <h1>Überblick</h1>
+                    <p>Mit was beschäftigt sich unsere Persona? Wie sieht sein Alltag aus? Auch scheinbar unwichtige Dinge wie
+                        das Lieblingsessen können helfen, ein bessers Bild des Nutzers zu zeichnen.
+                    </p>
+                </div>
+            </div>
+            <nav>
+                <div class="nav_button button_back" onclick="prevScreen()">
+                    ÄNDERN
+                </div>
+                <div class="nav_button" onclick="nextScreen()">
+                    WEITER
+                </div>
+            </nav>
+        </section>
+        <div onclick="nextContent()" class="next button">Fertig?</div>
+    </section>
+
+    <script>
+        let currentContent = 0;
+
+        function nextContent() {
+            switch (currentContent) {
+                case 0:
+                    document.getElementById('c1').style.display = 'none'
+                    document.getElementById('c2').style.display = 'grid'
+                    break
+                case 1:
+                    document.getElementById('c2').style.display = 'none'
+                    document.getElementById('c3').style.display = 'grid'
+                    break
+                case 2:
+                    document.getElementById('c3').style.display = 'none'
+                    document.getElementById('c4').style.display = 'grid'
+                    break
+                case 3:
+                    document.getElementById('c4').style.display = 'none'
+                    document.getElementById('c5').style.display = 'grid'
+                    break
+            }
+            currentContent++;
+        }
+    </script>
+
+</body>
+
+</html>

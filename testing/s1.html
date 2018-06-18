@@ -1,0 +1,48 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Unicorn Education | Set: User | Usability Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="content" id="c1">
+        <div class="space_top"></div>
+        <div class="left">
+            <img src="../src/buggy1.jpg" alt="">
+        </div>
+        <div class="right">
+            <!--Make sure the form has the autocomplete function switched off:-->
+            <form autocomplete="off" class="auto-flex">
+                <div class="autocomplete">
+                    <input id="myInput" type="text" placeholder="Features">
+                </div>
+                <input type="button" id="select" value="Hinzufügen">
+            </form>
+
+            <div class="list">
+                <ul id="feat"></ul>
+            </div>
+        </div>
+
+        <script src="../src/jquery.min.js"></script>
+        <script src="../s1-kinderwagen/index.js"></script>
+        <script>
+            $(function () {
+                autocomplete(document.getElementById("myInput"), countries);
+
+                submitSelection();
+            });
+        </script>
+        <a href="s1.html">
+            <div class="next button">Alles klar!</div>
+        </a>
+    </section>
+
+</body>
+
+</html>

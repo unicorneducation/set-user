@@ -9,7 +9,6 @@ body {
     height: 600px;
     /* border: 2px solid #ccc; */
     font-family: 'IBM Plex Mono';
-    margin: 25px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     background: white;
 }
@@ -140,7 +139,7 @@ input:focus, textarea:focus {outline:none;}
 }
 
 #bio {
-    grid-column: 
+    grid-column: 2 / span 4;
 }
 
 .complete .content {
