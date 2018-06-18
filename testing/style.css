@@ -37,6 +37,10 @@ h2 {
     grid-column: 1 / span 8;
 }
 
+#c4 h1 {
+    font-size: 1em;
+}
+
 .text {
     grid-column: 1 / span 7;
 }
@@ -58,7 +62,7 @@ h2 {
 .button:hover {
     margin-top: 28px;
     transition: 0.2s;
-    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.09);
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.03);
 }
 
 /* S1 Kinderwagen */
@@ -93,13 +97,11 @@ h2 {
 
 input {
     border: 1px solid transparent;
-    background-color: #f1f1f1;
     padding: 10px;
     font-size: 16px;
 }
 
 input[type=text] {
-    background-color: #f1f1f1;
     width: 100%;
 }
 
@@ -136,4 +138,42 @@ input[type=button] {
     /*when navigating through the items using the arrow keys:*/
     background-color: #4285f4 !important;
     color: #ffffff;
+}
+
+/* PERSONA */
+
+.persona_content {
+    grid-column: 2 /span 4;
+    padding: 16px;
+}
+
+#finish {
+    color: rgba(0,0,0,0.3);
+    border: 1px solid rgba(0,0,0,0.3);
+}
+
+.final {
+    width: 100%;
+    background: white;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    border: 1px solid #888;
+    padding: 32px;
+}
+
+.final_persona {
+    grid-column: 1 / span 4;
+}
+
+.final_features {
+    grid-column: 5 / span 4;
+}
+
+.final_features li {
+    list-style-type: none;
+    margin-bottom: 16px;
+}
+
+.final h1 {
+    font-size: 1em;
 }

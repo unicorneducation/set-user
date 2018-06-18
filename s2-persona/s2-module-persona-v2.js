@@ -31,6 +31,8 @@ prevScreen = function(){
         document.getElementById(screens[currentScreen+1]).style.display = 'none'
         document.getElementById(screens[currentScreen]).style.display = 'grid'
     }
+    document.getElementById('nav_next').style.color = 'rgba(0, 0, 0, 1)'
+    document.getElementById('nav_next').style.cursor = 'pointer'
 }
 
 switchPicture = function(p){
@@ -52,6 +54,10 @@ setUpFinal = function(){
     document.getElementById('pic').style.backgroundSize = 'cover'
     document.getElementById('name').innerHTML = document.getElementById('input_name').value
     document.getElementById('bio').innerHTML = document.getElementById('input_activities').value
+    document.getElementById('nav_next').style.color = 'rgba(0, 0, 0, 0.3)'
+    document.getElementById('nav_next').style.cursor = 'default'
+    document.getElementById('finish').style.color = 'rgba(0,0,0,1)'
+    document.getElementById('finish').style.border = '1px solid rgba(0,0,0,1)'
 }
 
 nameToFacts = function(){

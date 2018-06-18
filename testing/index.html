@@ -48,7 +48,7 @@
                 <input type="button" id="select" value="Hinzufügen">
             </form>
 
-            <div class="list">
+            <div class="list" id="features">
                 <ul id="feat"></ul>
             </div>
         </div>
@@ -107,7 +107,7 @@
                 </div>
             </div>
             <div class="module_screen activities" id="three">
-                <div class="content">
+                <div class="persona_content">
                     <h1>Das Leben von
                         <span id="facts_name"></span>
                     </h1>
@@ -121,7 +121,7 @@
                 </div>
             </div>
             <div class="module_screen complete" id="final">
-                <div class="content">
+                <div class="persona_content" id="persona_final">
                     <div id="pic"></div>
                     <h1 id="name"></h1>
                     <p id="bio"></p>
@@ -137,12 +137,29 @@
                 <div class="nav_button button_back" onclick="prevScreen()">
                     ÄNDERN
                 </div>
-                <div class="nav_button" onclick="nextScreen()">
+                <div id="nav_next" class="nav_button" onclick="nextScreen()">
                     WEITER
                 </div>
             </nav>
         </section>
-        <div onclick="nextContent()" class="next button">Fertig?</div>
+        <div id="finish" onclick="nextContent()" class="next button">Fertig?</div>
+    </section>
+
+    <section class="content" id="c5">
+        <div class="space_top"></div>
+        <h2>Macht das Sinn?</h2>
+        <div class="text">
+            <p>
+                Du hast einen Kinderwagen entworfen, und dir angeschaut was für ein Nutzer ihn benutzen würde. Macht deine Auswahl an Features noch Sinn?
+            </p>
+            <div class="final">
+                <div id="final_persona" class="final_persona"></div>
+                <div id="final_features" class="final_features"></div>
+            </div>
+            <p>
+                Wie würdest du das nächste mal vorgehen? Hast du eine Idee wie man diese Persona überprüfen könnte?
+            </p>
+        </div>
     </section>
 
     <script>
@@ -165,10 +182,20 @@
                 case 3:
                     document.getElementById('c4').style.display = 'none'
                     document.getElementById('c5').style.display = 'grid'
+                    prepareFinal()
                     break
             }
             currentContent++;
         }
+
+        function prepareFinal(){
+            let personaContainer = document.getElementById('final_persona')
+            let featuresContainer = document.getElementById('final_features')
+
+            personaContainer.innerHTML = document.getElementById('persona_final').innerHTML
+            featuresContainer.innerHTML = "<h1>Features</h1>" + document.getElementById('features').innerHTML
+        }
+
     </script>
 
 </body>
