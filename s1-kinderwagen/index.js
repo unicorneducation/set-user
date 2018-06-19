@@ -2,7 +2,7 @@
  * CREDITS: https://www.w3schools.com/howto/howto_js_autocomplete.asp
  */
 
-var countries = ["Bluetooth", "Audio", "Regenschirm", "Elektro", "Musik", ];
+var countries = ["Bluetooth", "Regenschirm", "E-Motor", "Musik", "Fingerabdruckscanner", "Navigation", "Regenreifen", "Gurte", "Polsterung", "Leder", "Stoff"];
 
 function submitSelection() {
   var but, inp, list;

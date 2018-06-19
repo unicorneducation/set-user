@@ -49,7 +49,9 @@
             </form>
 
             <div class="list" id="features">
-                <ul id="feat"></ul>
+                <ul id="feat">
+                    <li>Regenschutz</li>
+                </ul>
             </div>
         </div>
 
@@ -150,7 +152,8 @@
         <h2>Macht das Sinn?</h2>
         <div class="text">
             <p>
-                Du hast einen Kinderwagen entworfen, und dir angeschaut was für ein Nutzer ihn benutzen würde. Macht deine Auswahl an Features noch Sinn?
+                Du hast einen Kinderwagen entworfen, und dir angeschaut was für ein Nutzer ihn benutzen würde. Macht deine Auswahl an Features
+                noch Sinn?
             </p>
             <div class="final">
                 <div id="final_persona" class="final_persona"></div>
@@ -188,14 +191,13 @@
             currentContent++;
         }
 
-        function prepareFinal(){
+        function prepareFinal() {
             let personaContainer = document.getElementById('final_persona')
             let featuresContainer = document.getElementById('final_features')
 
             personaContainer.innerHTML = document.getElementById('persona_final').innerHTML
             featuresContainer.innerHTML = "<h1>Features</h1>" + document.getElementById('features').innerHTML
         }
-
     </script>
 
 </body>

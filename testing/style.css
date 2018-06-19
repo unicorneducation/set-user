@@ -18,7 +18,10 @@ body {
     display: grid;
 }
 
-#c2, #c3, #c4, #c5 {
+#c2,
+#c3,
+#c4,
+#c5 {
     display: none;
 }
 
@@ -47,7 +50,7 @@ h2 {
 
 .next {}
 
-.button {    
+.button {
     grid-column: 1 / span 2;
     border: 1px solid #111;
     height: 32px;
@@ -68,10 +71,10 @@ h2 {
 /* S1 Kinderwagen */
 
 .left {
-    grid-column: 1 / span 6;
+    grid-column: 1 / span 5;
     overflow: hidden;
     height: 600px;
-    background-color: #f5f5f5;
+    background-color: #fff;
 }
 
 .left img {
@@ -79,10 +82,10 @@ h2 {
 }
 
 .right {
-    grid-column: 7 / span 2;
+    grid-column: 6 / span 3;
     height: 600px;
-    background-color: #d5d5d5;
-    padding: 16px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .autocomplete {
@@ -93,21 +96,38 @@ h2 {
 
 .auto-flex {
     display: flex;
+    margin: 32px 16px 0;
 }
 
 input {
     border: 1px solid transparent;
-    padding: 10px;
+    padding: 5px;
     font-size: 16px;
+    font-family: "IBM Plex Mono";
 }
 
 input[type=text] {
-    width: 100%;
+    width: 90%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 input[type=button] {
-    background-color: #4285f4;
-    color: #fff;
+    grid-column: 1 / span 2;
+    border: 1px solid #111;
+    height: 32px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 32px;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.09);
+    transition: 0.2s;
+    padding: 0px 10px;
+    color: #444;
+}
+
+input[type=button]:hover {
+    margin-top: -2px;
+    transition: 0.2s;
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.03);
 }
 
 .autocomplete-items {
@@ -148,8 +168,8 @@ input[type=button] {
 }
 
 #finish {
-    color: rgba(0,0,0,0.3);
-    border: 1px solid rgba(0,0,0,0.3);
+    color: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .final {
