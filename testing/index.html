@@ -97,9 +97,13 @@
                         um was für einen Nutzer es sich handelt.
                     </p>
                     <div class="picture_nav_container">
-                        <span onclick="switchPicture(-1)" class="picture_nav_prev">zurück</span>
-                        <span onclick="switchPicture(1)" class="picture_nav_next">weiter</span>
+                        <span onclick="switchPicture(-1)" class="picture_nav_prev">vorheriges Bild</span>
+                        <span onclick="switchPicture(1)" class="picture_nav_next">nächstes Bild</span>
                     </div>
+                    <p>
+                        Du kannst auch ein eigenes Bild einfügen, wenn du kein passendes findest.
+                    </p>
+                    <input id="customPicture" onkeypress="customPicture()" type="text" label="URL von eigenem Bild" />
                 </div>
             </div>
             <div class="module_screen name" id="two">
@@ -115,7 +119,7 @@
                     <h1>Das Leben von
                         <span id="facts_name"></span>
                     </h1>
-                    <textarea id="input_activities" class="input_activities" placeholder="Er ist 28 Jahre. Wohnt alleine in einer Kleinstadt..."></textarea>
+                    <textarea id="input_activities" class="input_activities" placeholder="Schreibe etwas über das Leben der Persona..."></textarea>
                 </div>
                 <div class="helpArea">
                     <h1>Actitvities & Facts</h1>
@@ -139,7 +143,7 @@
             </div>
             <nav>
                 <div class="nav_button button_back" onclick="prevScreen()">
-                    ÄNDERN
+                    ZURÜCK
                 </div>
                 <div id="nav_next" class="nav_button" onclick="nextScreen()">
                     WEITER
@@ -151,10 +155,10 @@
 
     <section class="content" id="c5">
         <div class="space_top"></div>
-        <h2>Macht das Sinn?</h2>
+        <h2>Features und Personas</h2>
         <div class="text">
             <p>
-                Du hast einen Kinderwagen entworfen, und dir angeschaut was für ein Nutzer ihn benutzen würde. Macht deine Auswahl an Features
+                Du hast einen Kinderwagen entworfen und dir angeschaut was für ein Nutzer ihn benutzen würde. Macht deine Auswahl an Features
                 noch Sinn?
             </p>
             <div class="final">

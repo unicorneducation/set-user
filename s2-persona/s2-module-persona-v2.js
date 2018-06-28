@@ -50,7 +50,7 @@ switchPicture = function(p){
 }
 
 setUpFinal = function(){
-    document.getElementById('pic').style.background = 'center url(' + pictures[currentPicture] + ')'
+    document.getElementById('pic').style.background = document.getElementById('one').style.background
     document.getElementById('pic').style.backgroundSize = 'cover'
     document.getElementById('name').innerHTML = document.getElementById('input_name').value
     document.getElementById('bio').innerHTML = document.getElementById('input_activities').value
@@ -62,4 +62,8 @@ setUpFinal = function(){
 
 nameToFacts = function(){
     document.getElementById('facts_name').innerHTML = document.getElementById('input_name').value
+}
+
+customPicture = function(){
+    document.getElementById('one').style.background = 'center url(' + document.getElementById('customPicture').value + ')'
 }
