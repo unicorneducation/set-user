@@ -27,7 +27,7 @@ body
     background: red
     min-height: 800px
     float: right
-    transition: transform 0.6s ease
+    transition: transform 0.6s cubic-bezier(0, 0, 0.21, 1.25)
 
 .clear
     clear: both
@@ -48,7 +48,7 @@ body
     display: grid
     grid-template-columns: repeat(4, 1fr)
     padding: 32px
-    grid-auto-rows: min-content;
+    grid-auto-rows: min-content
 
     header 
         grid-column: 1 / span 4
