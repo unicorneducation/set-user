@@ -3,6 +3,13 @@
  */
 
 var countries = ["Bluetooth", "Regenschirm", "E-Motor", "Musik", "Fingerabdruckscanner", "Navigation", "Regenreifen", "Gurte", "Polsterung", "Leder", "Stoff"];
+var local = localStorage;
+var featItems = [];
+
+var array;
+var array2;
+
+var feat;
 
 function submitSelection() {
   var but, inp, list;
@@ -13,14 +20,14 @@ function submitSelection() {
   var featNum;
 
   but.on('click', function () {
-    // if (countries.includes(inp.val())) {
     list.append("<li><span class='delete'>x</span><span class='text'>" + inp.val() + '</span></li>')
     inp.val("")
-    // } else {
-    //   console.log("Sorry");
-    // }
 
     updateList()
+
+    local.setItem('feat', JSON.stringify(featItems))
+
+
   })
 
   list.on('click', '.delete', function () {
@@ -44,6 +51,9 @@ function submitSelection() {
     }
   }
 
+
+
+
 }
 
 
@@ -62,9 +72,7 @@ function autocomplete(inp, arr) {
     }
     currentFocus = -1;
 
-    var feat = $('#feat').children().children('.text').toArray();
-
-
+    feat = $('#feat').children().children('.text').toArray();
 
     for (var k = 0; k < feat.length; k++) {
       if (arr.includes(feat[k].innerHTML)) {
@@ -72,8 +80,11 @@ function autocomplete(inp, arr) {
         var ind = arr.indexOf(feat[k].innerHTML)
         console.log(ind);
 
+
         arr.splice(ind, 1)
       }
+      featItems = JSON.parse(local.getItem('feat'))
+      featItems.push(feat[k].innerHTML)
     }
     /*create a DIV element that will contain the items (values):*/
     a = document.createElement("DIV");

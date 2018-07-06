@@ -31,7 +31,7 @@ function loadPage(num) {
     $('article').fadeOut(function () {
       $('article').html("")
       for (var text of content) {
-        $('article').append('<p>' + text + '</p>').delay(300)
+        $('article').append('<p>' + text + '</p>')
       }
     })
     $('article').fadeIn()
@@ -55,8 +55,8 @@ function loadPage(num) {
       $('.double-nav').show();
     }
 
-    next.text(nextText)
-    prev.text(prevText)
+    next.html(nextText)
+    prev.html(prevText)
 
 
   })

@@ -31,7 +31,7 @@
       ],
       "prevent": true,
       "prev": "Zurück",
-      "next": "<a href='/s2'>Personas</a>"
+      "next": "<a href='../s2'>Personas</a>"
     }
   ]
 }
