@@ -300,6 +300,11 @@ a {
   color: #ffffff;
 }
 
+.content {
+  -webkit-transform: translateY(-800px);
+          transform: translateY(-800px);
+}
+
 .persona {
   padding: 32px;
   -ms-grid-columns: (1fr)[8];
@@ -317,6 +322,8 @@ a {
   height: 360px;
   background: white;
   border: 1px solid #777777;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .persona ul {
@@ -325,6 +332,7 @@ a {
   grid-column: 2 / span 6;
   list-style-type: none;
   margin: 0;
+  margin-top: 32px;
   padding: 0;
   display: -ms-grid;
   display: grid;
@@ -341,6 +349,35 @@ a {
   grid-column: auto / span 1;
   background: white;
   border: 1px solid #777777;
+  -webkit-box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.04);
+          box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.04);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.persona ul li:last-of-type {
+  border: 1px dashed #777777;
+  background: inherit;
+  -webkit-box-shadow: 0px 0px;
+          box-shadow: 0px 0px;
+}
+
+.persona ul li:last-of-type:hover {
+  -webkit-box-shadow: 0px 0px;
+          box-shadow: 0px 0px;
+  -webkit-transform: none;
+          transform: none;
+  border: 1px solid #777777;
+}
+
+.persona ul li:hover {
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+  -webkit-box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.02);
+          box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.02);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 .persona .image {

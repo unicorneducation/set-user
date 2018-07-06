@@ -52,14 +52,10 @@
                 <img src="src/Persona_1.png">
             </section>
             <section class="slide persona">
-                <div class="main_picture">
+                <div class="main_picture" id="main_picture">
 
                 </div>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                <ul id="persona_bilder">
                     <li></li>
                     <li></li>
                     <li></li>
@@ -103,6 +99,19 @@
 
     <script src="../jquery.min.js"></script>
     <script src="index.js"></script>
+    <script>
+
+        for(let i = 0; i < 13; i++){
+            let container = document.getElementById('persona_bilder').getElementsByTagName('li')[i]
+            container.style.background = 'url("src/p' + (i+1) + '.jpg")'
+            container.style.backgroundSize = 'cover'
+            container.addEventListener("click", function(){ changePicture(container); })
+        }
+
+        function changePicture(from) {
+            document.getElementById('main_picture').style.background = from.style.background
+        }
+    </script>
 </body>
 
 </html>

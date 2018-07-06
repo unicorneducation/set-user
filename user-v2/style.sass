@@ -231,6 +231,9 @@ a
 
 // Persona
 
+.content 
+    transform: translateY(-800px)
+
 .persona
     padding: 32px
     grid-template-columns: repeat(8, 1fr) 
@@ -243,12 +246,14 @@ a
         grid-column: 3 / span 4
         height: 360px
         background: white
-        border: 1px solid #777777
+        border: 1px solid #777777        
+        transition: all 0.3s
     
     ul
         grid-column: 2 / span 6
         list-style-type: none
         margin: 0
+        margin-top: 32px
         padding: 0
         display: grid
         grid-template-columns: repeat(6, 1fr)
@@ -261,6 +266,24 @@ a
             grid-column: auto / span 1
             background: white
             border: 1px solid #777777
+            box-shadow: 4px 4px 0px rgba(0,0,0,0.04)
+            transition: all 0.2s
+            cursor: pointer
+
+            &:last-of-type
+                border: 1px dashed #777777
+                background: inherit
+                box-shadow: 0px 0px
+
+                &:hover
+                    box-shadow: 0px 0px
+                    transform: none
+                    border: 1px solid #777777
+
+            &:hover
+                transform: translateY(-8px)
+                box-shadow: 8px 8px 0px rgba(0,0,0,0.02)
+                transition: all 0.2s
 
     // 02
 
