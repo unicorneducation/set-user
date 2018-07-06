@@ -1,7 +1,7 @@
   var content = $('.content');
   var position = 0;
 
-  var numSlides = $('.slide').length - 2;
+  var numSlides = $('.slide').length - 1;
   var maxScroll = numSlides * 800;
   var curSlide = 0;
 
@@ -55,7 +55,7 @@
 
   start.click(function () {
     // console.log('click');
-    if (position <= maxScroll) {
+    if (position < maxScroll) {
 
       position += 800
       content.css({
@@ -64,19 +64,17 @@
       // console.log(position);
       curSlide++;
       loadPage(curSlide)
-
-      console.log(prevent);
+      console.log(curSlide);
     }
   })
 
   next.click(function () {
-    // console.log('click');
+    console.log('click');
     if (curSlide == 1) {
       prevent = true
-      $(this).text("Personas")
+      $(this).html("<a href='/#'>Personas</a>")
     } else if (curSlide == 2) {
-      prevent = false
-      $(this).text("Weiter")
+      prevent = true
     }
     if (position <= maxScroll) {
       if (prevent == "false" || !prevent) {
@@ -85,9 +83,11 @@
           "transform": "translateY(-" + position + "px)",
         })
       }
-      console.log(position);
-      curSlide++;
-      loadPage(curSlide)
+      if (curSlide <= numSlides) {
+        curSlide++;
+        loadPage(curSlide)
+      }
+      console.log(curSlide);
     }
   })
 
@@ -104,8 +104,8 @@
           "transform": "translateY(-" + position + "px)",
         })
       }
-      console.log(position);
       curSlide--;
       loadPage(curSlide)
+      console.log(curSlide);
     }
   })

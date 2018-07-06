@@ -12,6 +12,11 @@ body {
   font-size: 18px;
 }
 
+a {
+  text-decoration: none;
+  color: #707070;
+}
+
 .wrapper {
   width: 1202px;
   height: 800px;
