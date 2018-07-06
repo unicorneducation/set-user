@@ -106,6 +106,17 @@ input {
     font-family: "IBM Plex Mono";
 }
 
+#feat {
+    list-style: none;
+}
+
+#feat .delete {
+    margin: 0 5px;
+    padding-bottom: 7px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
 input[type=text] {
     width: 90%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);

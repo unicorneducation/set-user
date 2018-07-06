@@ -12,7 +12,7 @@ function submitSelection() {
 
   but.on('click', function () {
     // if (countries.includes(inp.val())) {
-    list.append("<li>" + inp.val() + '</li>')
+    list.append("<li><span class='delete'>x</span>" + inp.val() + '</li>')
     inp.val("")
     // } else {
     //   console.log("Sorry");
@@ -27,6 +27,10 @@ function submitSelection() {
     } else if (featNum >= 5) {
       $('.left img').attr('src', "../src/buggy3.jpg");
     }
+  })
+
+  list.on('click', '.delete', function () {
+    $(this).closest('li').remove()
   })
 
 }
