@@ -91,6 +91,24 @@ body
             align-self: center
             font-weight: 800
 
+    .single-nav
+        grid-column: 1 / span 4
+
+        nav
+        grid-column: 1 / span 4
+        
+    .double-nav
+        grid-column: 1 / span 4
+        grid-template-columns: repeat(4, 1fr)
+        grid-gap: 8px
+        display: grid
+        nav
+        .left
+            grid-column: 1 / span 2
+        .right
+            grid-column: 3 / span 2
+
+
 .slide
     img
         margin-top: -1px
