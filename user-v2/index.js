@@ -37,18 +37,30 @@ loadPage(0)
 function loadPage(num) {
   // gets teams from group.json 
   $.getJSON("./content.json", function (data) {
+    console.log("loaded");
 
     var content = data.slides[num].content
     var title = data.slides[num].title
     var subtitle = data.slides[num].subtitle
 
-    $('article').html("")
-    for (var text of content) {
-      $('article').append('<p>' + text + '</p>')
-    }
+    $('article').fadeOut(function () {
+      $('article').html("")
+      for (var text of content) {
+        $('article').append('<p>' + text + '</p>').delay(300)
+      }
+    })
+    $('article').fadeIn()
 
-    $('#title').text(title)
-    $('#subtitle').text(subtitle)
+    $('#title').fadeOut(function () {
+      $('#title').text(title)
+    })
+    $('#title').fadeIn()
+
+    $('#subtitle').fadeOut(function () {
+      $('#subtitle').text(subtitle)
+    })
+    $('#subtitle').fadeIn()
+
   });
 
 }
