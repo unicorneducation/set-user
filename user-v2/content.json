@@ -1,0 +1,13 @@
+{
+  "slides": [{
+    "page": 0,
+    "title": "Der Nutzer",
+    "subtitle": "Intro",
+    "content": ["This a test", "another one", "block 3"]
+  }, {
+    "page": 1,
+    "title": "Teyt",
+    "subtitle": "Outro",
+    "content": ["Next Page", "another two", "block 22222"]
+  }]
+}
