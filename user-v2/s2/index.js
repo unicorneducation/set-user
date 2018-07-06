@@ -14,7 +14,7 @@
 
   function loadPage(num) {
     // gets teams from group.json 
-    $.getJSON("./content.json", function (data) {
+    $.getJSON("content.json", function (data) {
       console.log("loaded");
 
       var content = data.slides[num].content
@@ -72,7 +72,7 @@
     console.log('click');
     if (curSlide == 1) {
       prevent = true
-      $(this).html("<a href='/#'>Personas</a>")
+      $(this).html("<a href='session2.html'>Personas</a>")
     } else if (curSlide == 2) {
       prevent = true
     }

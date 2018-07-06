@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <title>Set: User</title>
 </head>
 
@@ -49,34 +49,6 @@
         </section>
         <section class="content">
             <section class="slide">
-
-                <img src="./src/User_01.png">
-            </section>
-            <section class="slide kinderwagen">
-
-                <!--Make sure the form has the autocomplete function switched off:-->
-                <div class="buggy-wrapper">
-                    <div class="img-container">
-                        <img src="./src/User_02.png">
-                    </div>
-                    <div class="list" id="features">
-                        <ul id="feat">
-                            <li>
-                                <span class="delete">x</span>
-                                <span class="text">Regenschutz</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <form autocomplete="off" class="auto-flex">
-                        <div class="autocomplete">
-                            <input id="myInput" type="text" placeholder="Features">
-                        </div>
-                        <input type="button" id="select" value="Hinzufügen">
-                    </form>
-                </div>
-            </section>
-            <section class="slide">
                 <img src="src/Persona_1.png">
             </section>
             <section class="slide persona">
@@ -108,11 +80,11 @@
                 <div class="image">
 
                 </div>
-                <input class="name" type="text" placeholder="Wie heißt die Persona?"/>
-                
+                <input class="name" type="text" placeholder="Wie heißt die Persona?" />
+
                 <div class="age">
-                   <input type="number" placeholder="XX"/>
-                   <span>Jahre</span>
+                    <input type="number" placeholder="XX" />
+                    <span>Jahre</span>
                 </div>
                 <div class="gender">
                     <item>Weiblich</item>
@@ -129,16 +101,8 @@
         <div class="clear"></div>
     </section>
 
-    <script src="../src/jquery.min.js"></script>
-    <script src="s1/index.js"></script>
+    <script src="../jquery.min.js"></script>
     <script src="index.js"></script>
-    <script>
-        $(function () {
-            autocomplete(document.getElementById("myInput"), countries);
-
-            submitSelection();
-        });
-    </script>
 </body>
 
 </html>

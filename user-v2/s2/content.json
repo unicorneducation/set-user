@@ -1,0 +1,43 @@
+{
+  "slides": [{
+      "page": 0,
+      "title": "Der Nutzer",
+      "subtitle": "Session 02",
+      "content": ["Lass uns eine Persona entwerfen. Sie steht exemplarisch für den späteren Nutzer des Kinderwagens.",
+        "Immer wenn du dann beim Designprozess etwas gestaltest, kannst du in die Rolle der Persona rutschen und dich fragen: Macht das Sinn?"
+      ]
+    }, {
+      "page": 1,
+      "title": "Der Nutzer",
+      "subtitle": "Session 02",
+      "content": ["Eines der Hauptmerkmale der Persona ist ein Bild. Dieses Bild sollte dir direkt einen Eindruck geben, um was für einen Nutzer es sich handelt."]
+    },
+    {
+      "page": 2,
+      "title": "Der Nutzer",
+      "subtitle": "Session 02",
+      "content": ["Wie heißt die Person? Der Name sollte zum Alter und der Herkunft passen.",
+        "Mit was beschäftigt sich unsere Persona? Wie sieht sein Alltag aus?",
+        "Auch scheinbar unwichtige Dinge wie das Lieblingsessen können helfen, ein bessers Bild des Nutzers zu zeichnen."
+      ]
+    },
+    {
+      "page": 3,
+      "title": "Der Nutzer",
+      "subtitle": "Session 02",
+      "content": ["*Name* ist also unsere Persona. </br>Bist du zufrieden mit * ihr * ?"]
+    },
+    {
+      "page": 4,
+      "title": "Der Nutzer",
+      "subtitle": "Session 02",
+      "content": ["Sehr gut!", "Schauen wir uns nochmal die Features von Session 1 an:", "Findest du diese Features werden von *Name* wirklich benötigt?"]
+    },
+    {
+      "page": 5,
+      "title": "Der Nutzer",
+      "subtitle": "Session 02",
+      "content": ["Wie würdest du das nächste mal vorgehen?", "Hast du eine Idee wie man deine Persona überprüfen könnte?"]
+    }
+  ]
+}
