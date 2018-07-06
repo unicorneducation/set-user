@@ -10,6 +10,8 @@ function submitSelection() {
   var list = $('#feat')
   var but = $('#select')
 
+  var featNum;
+
   but.on('click', function () {
     // if (countries.includes(inp.val())) {
     list.append("<li><span class='delete'>x</span><span class='text'>" + inp.val() + '</span></li>')
@@ -18,7 +20,16 @@ function submitSelection() {
     //   console.log("Sorry");
     // }
 
-    var featNum = $('#feat').children().toArray();
+    updateList()
+  })
+
+  list.on('click', '.delete', function () {
+    $(this).closest('li').remove();
+    updateList();
+  })
+
+  function updateList() {
+    featNum = $('#feat').children().toArray();
     featNum = featNum.length
     if (featNum <= 2) {
       $('.img-container img').attr('src', "src/Kinderwagen_1.png");
@@ -31,11 +42,7 @@ function submitSelection() {
     } else if (featNum >= 6) {
       $('.img-container img').attr('src', "src/Kinderwagen_5.png");
     }
-  })
-
-  list.on('click', '.delete', function () {
-    $(this).closest('li').remove()
-  })
+  }
 
 }
 
