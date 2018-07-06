@@ -8,9 +8,7 @@
   var prev = $('#prev')
   var start = $('#start')
   var next = $('#next')
-
-
-
+  var prevent = false;
 
   loadPage(curSlide)
 
@@ -49,30 +47,44 @@
         $('.single-nav').hide();
         $('.double-nav').show();
       }
+
+
     })
 
   }
 
   start.click(function () {
-    console.log('click');
+    // console.log('click');
     if (position <= maxScroll) {
+
       position += 800
       content.css({
         "transform": "translateY(-" + position + "px)",
       })
-      console.log(position);
+      // console.log(position);
       curSlide++;
       loadPage(curSlide)
+
+      console.log(prevent);
     }
   })
 
   next.click(function () {
-    console.log('click');
+    // console.log('click');
+    if (curSlide == 1) {
+      prevent = true
+      $(this).text("Personas")
+    } else if (curSlide == 2) {
+      prevent = false
+      $(this).text("Weiter")
+    }
     if (position <= maxScroll) {
-      position += 800
-      content.css({
-        "transform": "translateY(-" + position + "px)",
-      })
+      if (prevent == "false" || !prevent) {
+        position += 800
+        content.css({
+          "transform": "translateY(-" + position + "px)",
+        })
+      }
       console.log(position);
       curSlide++;
       loadPage(curSlide)
@@ -80,11 +92,18 @@
   })
 
   prev.click(function () {
+    if (curSlide == 1) {
+      prevent = false
+    } else if (curSlide == 2) {
+      prevent = true
+    }
     if (position > 0) {
-      position -= 800
-      content.css({
-        "transform": "translateY(-" + position + "px)",
-      })
+      if (prevent == "false" || !prevent) {
+        position -= 800
+        content.css({
+          "transform": "translateY(-" + position + "px)",
+        })
+      }
       console.log(position);
       curSlide--;
       loadPage(curSlide)
