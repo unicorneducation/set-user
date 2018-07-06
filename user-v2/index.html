@@ -49,10 +49,40 @@
         </section>
         <section class="content">
             <section class="slide">
+
                 <img src="./src/User_01.png">
             </section>
-            <section class="slide">
-                <img src="./src/User_02.png">
+            <section class="slide kinderwagen">
+
+                <!--Make sure the form has the autocomplete function switched off:-->
+                <div class="buggy-wrapper">
+                    <div class="img-container">
+
+                        <img src="./src/User_02.png">
+                    </div>
+                    <div class="list" id="features">
+                        <ul id="feat">
+                            <li>
+                                <span class="delete">x</span>
+                                <span class="text">Regenschutz</span>
+                            </li>
+                            <li>
+                                <span class="delete">x</span>
+                                <span class="text">E-Motor</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <form autocomplete="off" class="auto-flex">
+                        <div class="autocomplete">
+                            <input id="myInput" type="text" placeholder="Features">
+                        </div>
+                        <input type="button" id="select" value="Hinzufügen">
+                    </form>
+                </div>
+
+
+
             </section>
             <section class="slide">
 
@@ -61,8 +91,16 @@
         <div class="clear"></div>
     </section>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="../src/jquery.min.js"></script>
+    <script src="s1/index.js"></script>
     <script src="index.js"></script>
+    <script>
+        $(function () {
+            autocomplete(document.getElementById("myInput"), countries);
+
+            submitSelection();
+        });
+    </script>
 </body>
 
 </html>
