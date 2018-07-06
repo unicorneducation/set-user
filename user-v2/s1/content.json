@@ -6,14 +6,20 @@
       "content": ["In jedem Projekt das entwickelt wird, geht es immer darum, für wen man eigentlich das Projekt gestaltet.",
         "Man stellt sich von Anfang an die Frage: Wer ist der spätere Endnutzer unseres Produkts oder Services?",
         "Und genau darum geht es in dieser Session."
-      ]
+      ],
+      "prevent": false,
+      "prev": "Zurück",
+      "next": "Weiter"
     }, {
       "page": 1,
       "title": "Der Nutzer",
       "subtitle": "Session 01",
       "content": ["Du bist in der glorreichen Situation einen Auftrag von einem Hersteller bekommen zu haben, den smarten Kinderwagen der Zukunft zu entwickeln und auf den Markt zu bringen.Dieser darf ganz nach deinen Vorstellungen entstehen.Der Vorstand vertraut dir dabei, da Du ein guter Designer bist und sie viel von Dir halten.",
         "Lege los und erstelle eine Feature Liste von Dingen an, die du denkst, die einen smarten Kinderwagen der Zukunft hineingehören. Ein paar Punkte stehen schon in der Liste, füge über das Eingabefeld noch weitere hinzu."
-      ]
+      ],
+      "prevent": true,
+      "prev": "Zurück",
+      "next": "Weiter"
     },
     {
       "page": 2,
@@ -22,7 +28,10 @@
       "content": ["So eine Liste von Features ist wichtig um sich einen Scope zu setzen, der zeigt wo das Projekt am besten enden soll. Aber betrachte diese Liste doch mal genauer und achte dabei auf die Sinnhaftigkeit dieses Features und ob der spätere Nutzer dies wirklich benötigt.Wo wir bei der Frage sind: Wer ist eigentlich unserer späterer Nutzer ? ",
         "Hast du dir bei der Erstellung der Liste darüber Gedanken gemacht, wer später den Kinderwagen benutzen wird? Eine einfache Aussage wie 'Mütter' zählt dabei nicht, da es unendlich verschiedene Persönlichkeiten gibt.",
         "Versuche doch erst einmal festzuhalten, wie ein durchschnittlicher Nutzer aussehen könnte. Was motiviert ihn? Wie gestaltet sich sein Leben ? Für diesen Schritt gibt es Personas."
-      ]
+      ],
+      "prevent": true,
+      "prev": "Zurück",
+      "next": "<a href='/s2'>Personas</a>"
     }
   ]
 }
