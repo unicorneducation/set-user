@@ -12,7 +12,7 @@
 
 
 
-  loadPage(0)
+  loadPage(curSlide)
 
   function loadPage(num) {
     // gets teams from group.json 
