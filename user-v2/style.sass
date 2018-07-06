@@ -2,25 +2,25 @@
     box-sizing: border-box
 
 body
-    background: #efefef
+    background: #fafafa
     margin: 0
     padding: 0
+    font-family: 'IBM Plex Mono'
+    color: #707070
+    font-size: 18px
 
+// Layout
+ 
 .wrapper
     width: 1202px
     height: 800px
-    border: 1px solid #333
+    border: 1px solid #707070
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.04)
     margin: 0 auto
     top: 50%
     transform: translateY(-50%)
     position: relative
     overflow: hidden
-
-.sidebar 
-    width: 400px
-    background: black
-    height: 800px
-    float: left
 
 .content
     width: 800px
@@ -35,5 +35,62 @@ body
 .slide
     height: 800px
     width: 800px
-    background: green
+    background: #efefef
     border-bottom: 2px solid white
+
+// Sidebar
+
+.sidebar
+    width: 400px
+    background: white
+    height: 800px
+    float: left
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    padding: 32px
+    grid-auto-rows: min-content;
+
+    header 
+        grid-column: 1 / span 4
+        height: 100px
+
+    h1
+        font-weight: 800
+        font-size: 1.17em
+        margin: 0
+
+    h2
+        font-weight: 400
+        font-size: 1.17em
+        margin: 0
+
+    article
+        grid-column: 1 / span 4
+        height: 576px
+
+    nav 
+        height: 64px
+        border: 1px solid #707070
+        grid-column: 1 / span 4
+        display: grid
+        grid-template-columns: repeat(4, 1fr)    
+        box-shadow: 4px 4px 0px rgba(0,0,0,0.04)
+        cursor: pointer        
+        transition: all 0.2s
+        align-self: end
+
+        &:hover
+            transform: translateY(-4px)
+            transition: all 0.2s
+            color: black
+            box-shadow: 8px 8px 0px rgba(0,0,0,0.02)
+
+        .nav_centered
+            grid-column: 1 / span 4
+            text-align: center
+            align-self: center
+            font-weight: 800
+
+.slide
+    img
+        margin-top: -1px
