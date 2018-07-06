@@ -295,11 +295,6 @@ body {
   color: #ffffff;
 }
 
-.content {
-  -webkit-transform: translateY(-4000px);
-          transform: translateY(-4000px);
-}
-
 .persona {
   padding: 32px;
   -ms-grid-columns: (1fr)[8];
