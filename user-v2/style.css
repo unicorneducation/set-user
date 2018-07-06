@@ -1,0 +1,48 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #efefef;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 1202px;
+  height: 800px;
+  border: 1px solid #333;
+  margin: 0 auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 400px;
+  background: black;
+  height: 800px;
+  float: left;
+}
+
+.content {
+  width: 800px;
+  background: red;
+  min-height: 800px;
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+.slide {
+  height: 800px;
+  width: 800px;
+  background: green;
+  border-bottom: 2px solid white;
+}
+/*# sourceMappingURL=style.css.map */
