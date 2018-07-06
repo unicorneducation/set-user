@@ -164,6 +164,10 @@ body {
   margin-top: -1px;
 }
 
+.slide.kinderwagen {
+  background-color: #fff;
+}
+
 .slide.kinderwagen .buggy-wrapper {
   padding: 32px;
   width: 100%;
@@ -171,8 +175,8 @@ body {
 }
 
 .slide.kinderwagen .buggy-wrapper .img-container {
-  width: 450px;
-  height: 450px;
+  width: 520px;
+  height: 520px;
   float: left;
 }
 

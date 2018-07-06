@@ -20,12 +20,16 @@ function submitSelection() {
 
     var featNum = $('#feat').children().toArray();
     featNum = featNum.length
-    if (featNum < 3) {
-      $('.left img').attr('src', "../src/buggy1.jpg");
-    } else if (featNum >= 3 && featNum < 5) {
-      $('.left img').attr('src', "../src/buggy2.jpg");
-    } else if (featNum >= 5) {
-      $('.left img').attr('src', "../src/buggy3.jpg");
+    if (featNum <= 2) {
+      $('.img-container img').attr('src', "src/Kinderwagen_1.png");
+    } else if (featNum >= 3 && featNum < 4) {
+      $('.img-container img').attr('src', "src/Kinderwagen_2.png");
+    } else if (featNum >= 4 && featNum < 5) {
+      $('.img-container img').attr('src', "src/Kinderwagen_3.png");
+    } else if (featNum >= 5 && featNum < 6) {
+      $('.img-container img').attr('src', "src/Kinderwagen_4.png");
+    } else if (featNum >= 6) {
+      $('.img-container img').attr('src', "src/Kinderwagen_5.png");
     }
   })
 
