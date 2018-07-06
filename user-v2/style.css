@@ -288,4 +288,138 @@ body {
   background-color: #9e9e9e !important;
   color: #ffffff;
 }
+
+.content {
+  -webkit-transform: translateY(-4000px);
+          transform: translateY(-4000px);
+}
+
+.persona {
+  padding: 32px;
+  -ms-grid-columns: (1fr)[8];
+      grid-template-columns: repeat(8, 1fr);
+  display: -ms-grid;
+  display: grid;
+  grid-auto-rows: -webkit-min-content;
+  grid-auto-rows: min-content;
+}
+
+.persona .main_picture {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 4;
+  grid-column: 3 / span 4;
+  height: 360px;
+  background: white;
+  border: 1px solid #777777;
+}
+
+.persona ul {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 6;
+  grid-column: 2 / span 6;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 16px;
+  grid-auto-rows: -webkit-min-content;
+  grid-auto-rows: min-content;
+  grid-row-gap: 16px;
+}
+
+.persona ul li {
+  height: 64px;
+  grid-column: auto / span 1;
+  background: white;
+  border: 1px solid #777777;
+}
+
+.persona .image {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / span 2;
+  background: white;
+  height: 160px;
+  border: 1px solid #777777;
+}
+
+.persona .age {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / span 2;
+  border: 1px solid #777777;
+  margin-top: 32px;
+}
+
+.persona .age input {
+  width: 50%;
+  float: left;
+  border: 0;
+  height: 32px;
+  line-height: 32px;
+  text-align: right;
+  font-size: 16px;
+}
+
+.persona .age span {
+  font-size: 16px;
+  line-height: 32px;
+  background: white;
+  display: block;
+  height: 32px;
+}
+
+.persona .name {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 4;
+  grid-column: 4 / span 4;
+  background: inherit;
+  border: 0;
+  border-bottom: 8px solid white;
+  height: 64px;
+  font-size: 1.8em;
+}
+
+.persona .gender {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 4;
+  grid-column: 4 / span 4;
+  background: white;
+  border: 1px solid #777777;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 16px;
+  font-size: 16px;
+  margin-top: 32px;
+}
+
+.persona .gender item {
+  width: 33%;
+  float: left;
+  text-align: center;
+}
+
+.persona .gender item input {
+  text-align: center;
+  width: 100%;
+  margin-top: 4px;
+  border: 0;
+  font-size: 16px;
+  font-family: 'IBM Plex Mono';
+}
+
+.persona .bio {
+  grid-column: 1 / span all;
+  margin-top: 32px;
+}
+
+.persona .bio textarea {
+  width: 100%;
+  padding: 32px;
+  font-family: 'IBM Plex Mono';
+  height: 480px;
+}
 /*# sourceMappingURL=style.css.map */
