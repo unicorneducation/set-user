@@ -38,10 +38,15 @@ function loadPage(num) {
 
         if (text == "featureList") {
           // load features from localStorage
-          var feats = loadStorage()
+          var feats = loadStorage("feat")
           for (var item in feats) {
             $('article').append('<p class="indent">' + feats[item] + '</p>')
           }
+        } else if (text.indexOf("<Name>") >= 0) {
+          var person = loadStorage("persona")
+          var reg = /<Name>/g;
+          text = text.replace(reg, person.name)
+          $('article').append('<p>' + text + '</p>')
         } else {
           $('article').append('<p>' + text + '</p>')
         }
@@ -77,17 +82,22 @@ function loadPage(num) {
 
 }
 
-function loadStorage() {
+function loadStorage(type) {
   var local = localStorage;
-  var featureList = JSON.parse(local.getItem("feat"));
 
-  return featureList;
+  if (type == "feat") {
+    var featureList = JSON.parse(local.getItem("feat"));
+    return featureList;
+  } else if (type == "persona") {
+    var persona = JSON.parse(local.getItem("persona"));
+    return persona;
+  }
+
 }
 
 start.click(function () {
   // console.log('click');
   if (position < maxScroll) {
-
     position += 800
     content.css({
       "transform": "translateY(-" + position + "px)",

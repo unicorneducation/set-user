@@ -34,7 +34,7 @@
       "page": 3,
       "title": "Der Nutzer",
       "subtitle": "Session 02",
-      "content": ["*Name* ist also unsere Persona. </br>Bist du zufrieden mit * ihr * ?"],
+      "content": ["<Name> ist also unsere Persona. </br>Bist du zufrieden mit <Name>?"],
       "prevent": true,
       "prev": "Nein :(",
       "next": "Ja :)"
@@ -43,7 +43,7 @@
       "page": 4,
       "title": "Der Nutzer",
       "subtitle": "Session 02",
-      "content": ["Sehr gut!", "Schauen wir uns nochmal die Features von Session 1 an:", "featureList", "Findest du diese Features werden von *Name* wirklich benötigt?"],
+      "content": ["Sehr gut!", "Schauen wir uns nochmal die Features von Session 1 an:", "featureList", "Findest du diese Features werden von <Name> wirklich benötigt?"],
       "prevent": true,
       "prev": "Zurück",
       "next": "Ja"
