@@ -12,6 +12,7 @@ var prev = $('#prev')
 var start = $('#start')
 var next = $('#next')
 var prevent = false;
+var prevPrevent = false;
 
 loadPage(curSlide)
 
@@ -24,6 +25,9 @@ function loadPage(num) {
     prevent = data.slides[num].prevent
     curPage = data.slides[num].page
     maxLength = data.slides.length - 1
+    if (curPage > 0) {
+      prevPrevent = data.slides[num - 1].prevent
+    }
 
     nextText = data.slides[num].next
     prevText = data.slides[num].prev
@@ -125,7 +129,7 @@ prev.click(function () {
   //   prevent = true
   // }
   if (position > 0) {
-    if (prevent == "false" || !prevent) {
+    if (prevPrevent == "false" || !prevPrevent) {
       position -= 800
       content.css({
         "transform": "translateY(-" + position + "px)",
