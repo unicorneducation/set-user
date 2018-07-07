@@ -73,16 +73,16 @@
                 </ul>
             </section>
             <section class="slide persona">
-                <div class="image">
+                <div class="image" id="bio_picture">
 
                 </div>
-                <input class="name" type="text" placeholder="Wie heißt die Persona?" />
+                <input class="name" onchange="checkBio()" id="name" type="text" placeholder="Wie heißt die Persona?" />
 
                 <div class="age">
-                    <input type="number" placeholder="XX" />
+                    <input type="number" id="age" placeholder="XX" onchange="checkBio()"/>
                     <span>Jahre</span>
                 </div>
-                <div class="gender">
+                <div class="gender" id="genders" onchange="checkBio()">
                     <item>Weiblich</item>
                     <item>Männlich</item>
                     <item>
@@ -90,9 +90,27 @@
                     </item>
                 </div>
                 <div class="bio">
-                    <textarea placeholder="Schreibe einen Text..."></textarea>
+                    <textarea id="persona_text" onchange="checkBio()" placeholder="Schreibe einen Text..."></textarea>
                 </div>
             </section>
+            
+            <section class="slide persona" onmouseover="checkBio()">
+                <div class="image" id="bio_2_picture">
+
+                </div>
+                <div id="bio_name" class="name">
+
+                </div>
+
+                <div class="age" id="bio_age">
+                </div>
+                <div class="gender" id="bio_gender">
+                </div>
+                <div class="bio">
+                    <div class="bio_text" id="bio_text"></div>
+                </div>
+            </section>
+
             <section class="slide">
                 <img src="src/Persona_1.png">
             </section>
@@ -103,16 +121,48 @@
     <script src="../jquery.min.js"></script>
     <script>
 
+        // Change Pictures
         for(let i = 0; i < 13; i++){
             let container = document.getElementById('persona_bilder').getElementsByTagName('li')[i]
             container.style.background = 'url("src/p' + (i+1) + '.jpg")'
             container.style.backgroundSize = 'cover'
-            container.addEventListener("click", function(){ changePicture(container); })
+            container.addEventListener("click", function(){ changePicture(container) })
         }
 
         function changePicture(from) {
             document.getElementById('main_picture').style.background = from.style.background
+            document.getElementById('bio_picture').style.background = from.style.background
+            document.getElementById('bio_2_picture').style.background = from.style.background
         }
+
+        // Change Gender
+        for(let i = 0; i < 3; i++){
+            let item = document.getElementById('genders').getElementsByTagName('item')[i]
+            item.addEventListener("click", function(){ changeGender(item) })
+        }
+
+        let activeGender = null
+
+        function changeGender(from){
+            if(activeGender != null){
+                activeGender.style.fontWeight = 300
+            }            
+            from.style.fontWeight = 800
+            activeGender = from
+            console.log(from)
+        }
+
+        function checkBio() {
+            document.getElementById('bio_age').innerText = document.getElementById('age').value + ' Jahre'
+            if(activeGender.innerText.length != 0){
+                document.getElementById('bio_gender').innerText = activeGender.innerText
+            } else {
+                document.getElementById('bio_gender').innerHTML = activeGender.firstElementChild.value
+            }
+            document.getElementById('bio_name').innerText = document.getElementById('name').value
+            document.getElementById('bio_text').innerText = document.getElementById('persona_text').value
+        }
+
     </script>
     <script src="../index.js"></script>
 </body>

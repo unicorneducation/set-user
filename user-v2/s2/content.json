@@ -55,7 +55,7 @@
       "content": ["Wie würdest du das nächste mal vorgehen?", "Hast du eine Idee wie man deine Persona überprüfen könnte?"],
       "prevent": true,
       "prev": "Zurück",
-      "next": "Field Research"
+      "next": "<a href='../s3'>Field Research</a>"
     }
   ]
 }

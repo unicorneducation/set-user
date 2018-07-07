@@ -231,9 +231,6 @@ a
 
 // Persona
 
-.content 
-    transform: translateY(-800px)
-
 .persona
     padding: 32px
     grid-template-columns: repeat(8, 1fr) 
@@ -336,6 +333,7 @@ a
             width: 33%
             float: left
             text-align: center
+            cursor: pointer
 
             input
                 text-align: center
@@ -349,7 +347,8 @@ a
         grid-column: 1 / span all
         margin-top: 32px
 
-        textarea
+        textarea, .bio_text
+            background: white
             width: 100%
             padding: 32px
             font-family: 'IBM Plex Mono'
