@@ -10,6 +10,17 @@
       "prevent": false,
       "prev": "Zurück",
       "next": "Weiter"
+    },
+    {
+      "page": 1,
+      "title": "Der Nutzer",
+      "subtitle": "Session 03",
+      "content": ["Wie wär es mit einem kleinen Interview?",
+        "Du hast eine Mutter gefunden, die gerne mit dir über ihren Alltag sprechen will."        
+      ],
+      "prevent": false,
+      "prev": "Zurück",
+      "next": "Weiter"
     }
   ]
 }

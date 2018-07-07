@@ -466,4 +466,56 @@ a {
   font-family: 'IBM Plex Mono';
   height: 480px;
 }
+
+.interview {
+  background: url("s3/src/Interview-01.png");
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[8];
+      grid-template-columns: repeat(8, 1fr);
+  grid-column-gap: 16px;
+}
+
+.interview .conversation {
+  border: 5px solid #09305B;
+  color: black;
+  padding: 32px;
+  margin-top: 64px;
+}
+
+.interview .npc {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-column: 2 / span 3;
+  height: 160px;
+}
+
+.interview .player {
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 3;
+  grid-column: 5 / span 3;
+  height: 160px;
+}
+
+.interview .player .next_questions {
+  margin-top: 32px;
+}
+
+.interview .player .next_questions item {
+  width: 100%;
+  display: block;
+  background: white;
+  border: 2px solid #09305B;
+  padding: 8px 16px;
+  margin-top: -8px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.interview .player .next_questions item:hover {
+  font-weight: 800;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
 /*# sourceMappingURL=style.css.map */
