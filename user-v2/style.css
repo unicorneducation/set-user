@@ -99,6 +99,10 @@ a {
   font-weight: 300;
 }
 
+.sidebar article p.indent {
+  padding-left: 16px;
+}
+
 .sidebar nav {
   height: 64px;
   border: 1px solid #707070;

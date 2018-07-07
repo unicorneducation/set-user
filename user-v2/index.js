@@ -31,7 +31,16 @@ function loadPage(num) {
     $('article').fadeOut(function () {
       $('article').html("")
       for (var text of content) {
-        $('article').append('<p>' + text + '</p>')
+
+        if (text == "featureList") {
+          // load features from localStorage
+          var feats = loadStorage()
+          for (var item in feats) {
+            $('article').append('<p class="indent">' + feats[item] + '</p>')
+          }
+        } else {
+          $('article').append('<p>' + text + '</p>')
+        }
       }
     })
     $('article').fadeIn()
@@ -59,8 +68,16 @@ function loadPage(num) {
     prev.html(prevText)
 
 
+
   })
 
+}
+
+function loadStorage() {
+  var local = localStorage;
+  var featureList = JSON.parse(local.getItem("feat"));
+
+  return featureList;
 }
 
 start.click(function () {
