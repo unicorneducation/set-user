@@ -57,3 +57,4 @@ typings/
 # dotenv environment variables file
 .env
 
+user-v2/style.css.map

@@ -124,9 +124,11 @@
         // Change Pictures
         for(let i = 0; i < 13; i++){
             let container = document.getElementById('persona_bilder').getElementsByTagName('li')[i]
-            container.style.background = 'url("src/p' + (i+1) + '.jpg")'
+            container.style.background = 'url("src/p' + (i + 1) + '.jpg")'
             container.style.backgroundSize = 'cover'
-            container.addEventListener("click", function(){ changePicture(container) })
+            container.addEventListener("click", function () {
+                changePicture(container);
+            })
         }
 
         function changePicture(from) {

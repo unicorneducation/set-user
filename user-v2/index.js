@@ -12,6 +12,7 @@ var prev = $('#prev')
 var start = $('#start')
 var next = $('#next')
 var prevent = false;
+var prevPrevent = false;
 
 loadPage(curSlide)
 
@@ -24,6 +25,9 @@ function loadPage(num) {
     prevent = data.slides[num].prevent
     curPage = data.slides[num].page
     maxLength = data.slides.length - 1
+    if (curPage > 0) {
+      prevPrevent = data.slides[num - 1].prevent
+    }
 
     nextText = data.slides[num].next
     prevText = data.slides[num].prev
@@ -31,7 +35,16 @@ function loadPage(num) {
     $('article').fadeOut(function () {
       $('article').html("")
       for (var text of content) {
-        $('article').append('<p>' + text + '</p>')
+
+        if (text == "featureList") {
+          // load features from localStorage
+          var feats = loadStorage()
+          for (var item in feats) {
+            $('article').append('<p class="indent">' + feats[item] + '</p>')
+          }
+        } else {
+          $('article').append('<p>' + text + '</p>')
+        }
       }
     })
     $('article').fadeIn()
@@ -59,8 +72,16 @@ function loadPage(num) {
     prev.html(prevText)
 
 
+
   })
 
+}
+
+function loadStorage() {
+  var local = localStorage;
+  var featureList = JSON.parse(local.getItem("feat"));
+
+  return featureList;
 }
 
 start.click(function () {
@@ -108,7 +129,7 @@ prev.click(function () {
   //   prevent = true
   // }
   if (position > 0) {
-    if (prevent == "false" || !prevent) {
+    if (prevPrevent == "false" || !prevPrevent) {
       position -= 800
       content.css({
         "transform": "translateY(-" + position + "px)",
