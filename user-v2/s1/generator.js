@@ -8,51 +8,67 @@ var featItems = [];
 
 var array;
 var array2;
-
-var feat;
+var list = $('#feat')
+var featNum;
 
 function submitSelection() {
-  var but, inp, list;
+  var but, inp;
   var inp = $('#myInput')
-  var list = $('#feat')
   var but = $('#select')
 
-  var featNum;
 
   but.on('click', function () {
     list.append("<li><span class='delete'>x</span><span class='text'>" + inp.val() + '</span></li>')
-    inp.val("")
 
     updateList()
+    featItems.push(inp.val())
 
     local.setItem('feat', JSON.stringify(featItems))
-
-
+    inp.val("")
   })
 
   list.on('click', '.delete', function () {
     $(this).closest('li').remove();
     updateList();
+
+    var text = $(this).next('.text').text();
+
+    featItems = JSON.parse(local.getItem('feat'))
+    var ind = featItems.indexOf(text)
+    featItems.splice(ind, 1)
+    local.setItem('feat', JSON.stringify(featItems))
   })
 
-  function updateList() {
-    featNum = $('#feat').children().toArray();
-    featNum = featNum.length
-    if (featNum <= 2) {
-      $('.img-container img').attr('src', "src/Kinderwagen_1.png");
-    } else if (featNum >= 3 && featNum < 4) {
-      $('.img-container img').attr('src', "src/Kinderwagen_2.png");
-    } else if (featNum >= 4 && featNum < 5) {
-      $('.img-container img').attr('src', "src/Kinderwagen_3.png");
-    } else if (featNum >= 5 && featNum < 6) {
-      $('.img-container img').attr('src', "src/Kinderwagen_4.png");
-    } else if (featNum >= 6) {
-      $('.img-container img').attr('src', "src/Kinderwagen_5.png");
-    }
+
+
+}
+
+function updateList() {
+  featNum = $('#feat').children().toArray();
+  featNum = featNum.length
+  if (featNum <= 2) {
+    $('.img-container img').attr('src', "src/Kinderwagen_1.png");
+  } else if (featNum >= 3 && featNum < 4) {
+    $('.img-container img').attr('src', "src/Kinderwagen_2.png");
+  } else if (featNum >= 4 && featNum < 5) {
+    $('.img-container img').attr('src', "src/Kinderwagen_3.png");
+  } else if (featNum >= 5 && featNum < 6) {
+    $('.img-container img').attr('src', "src/Kinderwagen_4.png");
+  } else if (featNum >= 6) {
+    $('.img-container img').attr('src', "src/Kinderwagen_5.png");
   }
+}
 
+function loadLocal() {
+  var localFeat = JSON.parse(local.getItem('feat'));
 
+  console.log(localFeat);
 
+  for (var item in localFeat) {
+    list.append("<li><span class='delete'>x</span><span class='text'>" + localFeat[item] + '</span></li>')
+
+  }
+  updateList()
 
 }
 
@@ -63,6 +79,8 @@ function autocomplete(inp, arr) {
   var currentFocus;
   /*execute a function when someone writes in the text field:*/
 
+  loadLocal()
+
   inp.addEventListener("input", function (e) {
     var a, b, i, val = this.value;
     /*close any already open lists of autocompleted values*/
@@ -72,19 +90,21 @@ function autocomplete(inp, arr) {
     }
     currentFocus = -1;
 
-    feat = $('#feat').children().children('.text').toArray();
+    var feat = $('#feat li').children('.text').toArray();
 
     for (var k = 0; k < feat.length; k++) {
       if (arr.includes(feat[k].innerHTML)) {
         console.log(feat[k].innerHTML);
         var ind = arr.indexOf(feat[k].innerHTML)
         console.log(ind);
-
-
         arr.splice(ind, 1)
       }
-      featItems = JSON.parse(local.getItem('feat'))
-      featItems.push(feat[k].innerHTML)
+      if (JSON.parse(local.getItem('feat')) != null) {
+        featItems = JSON.parse(local.getItem('feat'))
+      } else {
+        featItems = [];
+      }
+      // featItems.push(feat[k].innerHTML)
     }
     /*create a DIV element that will contain the items (values):*/
     a = document.createElement("DIV");
@@ -173,4 +193,6 @@ function autocomplete(inp, arr) {
   document.addEventListener("click", function (e) {
     closeAllLists(e.target);
   });
+
+
 }
