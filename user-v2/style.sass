@@ -9,12 +9,16 @@ body
     color: #707070
     font-size: 18px
 
-input[type=text] 
+input[type="text"] 
     width: 90%
     border: 0px
     border-bottom: 3px solid rgba(0, 0, 0, 0.3)
     background-color: transparent
     outline: none
+
+input[type="text"]:disabled
+    color: #d2d2d2
+    background-color: #e6e6e6
 
 // Layout
 
@@ -107,6 +111,9 @@ a
             text-align: center
             align-self: center
             font-weight: 800
+            height: 100%
+            width: 100%
+            line-height: 64px
 
     .single-nav
         grid-column: 1 / span 4
@@ -181,10 +188,6 @@ a
                 cursor: pointer
                 font-weight: bold
 
-
-
-
-
         input[type=button] 
             grid-column: 1 / span 2
             border: 1px solid #111
@@ -197,12 +200,18 @@ a
             padding: 0px 20px
             color: #444
 
-
         input[type=button]:hover 
             margin-top: -2px
             transition: 0.2s
             box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.03)
 
+        input[type=button]:disabled
+            color: #d2d2d2
+            background-color: #e6e6e6
+            &:hover 
+                margin-top: 0
+                transition: none
+                box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.09)
 
         .autocomplete-items 
             position: absolute

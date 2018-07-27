@@ -135,7 +135,7 @@ function autocomplete(inp, arr) {
 
   });
 
-  var allowSubmit = false;
+  var allowSubmit = true;
   /*execute a function presses a key on the keyboard:*/
   inp.addEventListener("keydown", function (e) {
     var x = document.getElementById(this.id + "autocomplete-list");
@@ -146,12 +146,14 @@ function autocomplete(inp, arr) {
       currentFocus++;
       /*and and make the current item more visible:*/
       addActive(x);
+      allowSubmit = false;
     } else if (e.keyCode == 38) { //up
       /*If the arrow UP key is pressed,
       decrease the currentFocus variable:*/
       currentFocus--;
       /*and and make the current item more visible:*/
       addActive(x);
+      allowSubmit = false;
     } else if (e.keyCode == 13 && !allowSubmit) {
       console.log("prevent");
       /*If the ENTER key is pressed, prevent the form from being submitted,*/

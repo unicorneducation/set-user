@@ -97,6 +97,10 @@ function loadPage(num) {
 
     if (preventInput) {
       $('input').prop('disabled', true);
+
+      // Session 01 specific
+      if ($('.delete')) $('.delete').remove();
+
     } else {
       $('input').prop('disabled', false);
     }
