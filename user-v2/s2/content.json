@@ -6,7 +6,7 @@
       "content": ["Lass uns eine Persona entwerfen. Sie steht exemplarisch für den späteren Nutzer des Kinderwagens.",
         "Immer wenn du dann beim Designprozess etwas gestaltest, kannst du in die Rolle der Persona rutschen und dich fragen: Macht das Sinn?"
       ],
-      "prevent": false,
+      "preventSlide": false,
       "prev": "Zurück",
       "next": "Weiter"
     }, {
@@ -14,7 +14,7 @@
       "title": "Der Nutzer",
       "subtitle": "Session 02",
       "content": ["Eines der Hauptmerkmale der Persona ist ein Bild. Dieses Bild sollte dir direkt einen Eindruck geben, um was für einen Nutzer es sich handelt."],
-      "prevent": false,
+      "preventSlide": false,
       "prev": "Zurück",
       "next": "Weiter"
     },
@@ -26,7 +26,7 @@
         "Mit was beschäftigt sich unsere Persona? Wie sieht sein Alltag aus?",
         "Auch scheinbar unwichtige Dinge wie das Lieblingsessen können helfen, ein bessers Bild des Nutzers zu zeichnen."
       ],
-      "prevent": false,
+      "preventSlide": false,
       "prev": "Zurück",
       "next": "Weiter"
     },
@@ -35,7 +35,7 @@
       "title": "Der Nutzer",
       "subtitle": "Session 02",
       "content": ["<Name> ist also unsere Persona. </br>Bist du zufrieden mit <Name>?"],
-      "prevent": true,
+      "preventSlide": true,
       "prev": "Nein :(",
       "next": "Ja :)"
     },
@@ -44,8 +44,8 @@
       "title": "Der Nutzer",
       "subtitle": "Session 02",
       "content": ["Sehr gut!", "Schauen wir uns nochmal die Features von Session 1 an:", "featureList", "Findest du diese Features werden von <Name> wirklich benötigt?"],
-      "prevent": true,
-      "prev": "Zurück",
+      "preventSlide": true,
+      "prev": "<a href='../s1/index.html?p=1'>Nein</a>",
       "next": "Ja"
     },
     {
@@ -53,7 +53,7 @@
       "title": "Der Nutzer",
       "subtitle": "Session 02",
       "content": ["Wie würdest du das nächste mal vorgehen?", "Hast du eine Idee wie man deine Persona überprüfen könnte?"],
-      "prevent": true,
+      "preventSlide": true,
       "prev": "Zurück",
       "next": "<a href='../s3'>Field Research</a>"
     }

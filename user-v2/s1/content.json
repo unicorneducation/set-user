@@ -7,7 +7,8 @@
         "Man stellt sich von Anfang an die Frage: Wer ist der spätere Endnutzer unseres Produkts oder Services?",
         "Und genau darum geht es in dieser Session."
       ],
-      "prevent": false,
+      "preventSlide": false,
+      "preventInput": false,
       "prev": "Zurück",
       "next": "Weiter"
     }, {
@@ -17,7 +18,8 @@
       "content": ["Du bist in der glorreichen Situation einen Auftrag von einem Hersteller bekommen zu haben, den smarten Kinderwagen der Zukunft zu entwickeln und auf den Markt zu bringen.Dieser darf ganz nach deinen Vorstellungen entstehen.Der Vorstand vertraut dir dabei, da Du ein guter Designer bist und sie viel von Dir halten.",
         "Lege los und erstelle eine Feature Liste von Dingen an, die du denkst, die einen smarten Kinderwagen der Zukunft hineingehören. Ein paar Punkte stehen schon in der Liste, füge über das Eingabefeld noch weitere hinzu."
       ],
-      "prevent": true,
+      "preventSlide": true,
+      "preventInput": false,
       "prev": "Zurück",
       "next": "Weiter"
     },
@@ -29,8 +31,9 @@
         "Hast du dir bei der Erstellung der Liste darüber Gedanken gemacht, wer später den Kinderwagen benutzen wird? Eine einfache Aussage wie 'Mütter' oder 'Väter' zählt dabei nicht, da es unendlich verschiedene Persönlichkeiten gibt.",
         "Versuche doch erst einmal festzuhalten, wie ein durchschnittlicher Nutzer aussehen könnte. Was motiviert ihn? Wie gestaltet sich sein Leben ? Für diesen Schritt gibt es Personas."
       ],
-      "prevent": true,
-      "prev": "Zurück",
+      "preventSlide": true,
+      "preventInput": true,
+      "prev": "",
       "next": "<a href='../s2'>Personas</a>"
     }
   ]

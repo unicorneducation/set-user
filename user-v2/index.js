@@ -1,4 +1,4 @@
-var content = $('.content');
+var sidebarContent = $('.content');
 var position = 0;
 
 var numSlides = $('.slide').length - 1;
@@ -11,10 +11,23 @@ var maxLength;
 var prev = $('#prev')
 var start = $('#start')
 var next = $('#next')
-var prevent = false;
-var prevPrevent = false;
+var preventSlide = false;
+var prevPreventSlide = false;
+var preventInput = false;
 
+if (getUrlParameter('p')) {
+  var curSlide = getUrlParameter('p')
+  slideUp(curSlide)
+}
 loadPage(curSlide)
+
+
+function getUrlParameter(name) {
+  name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+  var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+  var results = regex.exec(location.search);
+  return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+};
 
 function loadPage(num) {
   // gets teams from group.json 
@@ -22,15 +35,18 @@ function loadPage(num) {
     var content = data.slides[num].content
     var title = data.slides[num].title
     var subtitle = data.slides[num].subtitle
-    prevent = data.slides[num].prevent
+    preventSlide = data.slides[num].preventSlide
+    preventInput = data.slides[num].preventInput || false
     curPage = data.slides[num].page
     maxLength = data.slides.length - 1
     if (curPage > 0) {
-      prevPrevent = data.slides[num - 1].prevent
+      prevPreventSlide = data.slides[num - 1].preventSlide
     }
 
     nextText = data.slides[num].next
     prevText = data.slides[num].prev
+
+
 
     $('article').fadeOut(function () {
       $('article').html("")
@@ -73,10 +89,20 @@ function loadPage(num) {
       $('.double-nav').show();
     }
 
+    if (prevText == "") {
+      $('.double-nav').hide();
+      $('.single-nav').show();
+      start.html(nextText);
+    }
+
+    if (preventInput) {
+      $('input').prop('disabled', true);
+    } else {
+      $('input').prop('disabled', false);
+    }
+
     next.html(nextText)
     prev.html(prevText)
-
-
 
   })
 
@@ -95,13 +121,28 @@ function loadStorage(type) {
 
 }
 
+function slideUp(times) {
+  for (var i = 0; i < times; i++) {
+    position += 800
+    sidebarContent.css({
+      "transform": "translateY(-" + position + "px)",
+    })
+  }
+}
+
+function slideDown(times) {
+  for (var i = 0; i < times; i++) {
+    position -= 800
+    sidebarContent.css({
+      "transform": "translateY(-" + position + "px)",
+    })
+  }
+}
+
 start.click(function () {
   // console.log('click');
   if (position < maxScroll) {
-    position += 800
-    content.css({
-      "transform": "translateY(-" + position + "px)",
-    })
+    slideUp(1)
     // console.log(position);
     curSlide++;
     loadPage(curSlide)
@@ -112,17 +153,14 @@ start.click(function () {
 next.click(function () {
   console.log('click');
   // if (curSlide == curPage) {
-  //   prevent = true
+  //   preventSlide = true
   //   $(this).html("<a href='session2.html'>Personas</a>")
   // } else if (curSlide == 2) {
-  //   prevent = true
+  //   preventSlide = true
   // }
   if (position <= maxScroll) {
-    if (prevent == "false" || !prevent) {
-      position += 800
-      content.css({
-        "transform": "translateY(-" + position + "px)",
-      })
+    if (preventSlide == "false" || !preventSlide) {
+      slideUp(1)
     }
     if (curSlide < maxLength) {
       curSlide++;
@@ -134,16 +172,13 @@ next.click(function () {
 
 prev.click(function () {
   // if (curSlide == 1) {
-  //   prevent = false
+  //   preventSlide = false
   // } else if (curSlide == 2) {
-  //   prevent = true
+  //   preventSlide = true
   // }
   if (position > 0) {
-    if (prevPrevent == "false" || !prevPrevent) {
-      position -= 800
-      content.css({
-        "transform": "translateY(-" + position + "px)",
-      })
+    if (prevPreventSlide == "false" || !prevPreventSlide) {
+      slideDown(1)
     }
     curSlide--;
     loadPage(curSlide)

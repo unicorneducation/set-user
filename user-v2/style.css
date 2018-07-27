@@ -12,6 +12,14 @@ body {
   font-size: 18px;
 }
 
+input[type=text] {
+  width: 90%;
+  border: 0px;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.3);
+  background-color: transparent;
+  outline: none;
+}
+
 a {
   text-decoration: none;
   color: #707070;
@@ -217,7 +225,6 @@ a {
 }
 
 .slide.kinderwagen .buggy-wrapper input {
-  border: 1px solid transparent;
   padding: 5px;
   font-size: 22px;
   font-family: "IBM Plex Mono";
@@ -240,13 +247,6 @@ a {
   padding-bottom: 7px;
   cursor: pointer;
   font-weight: bold;
-}
-
-.slide.kinderwagen .buggy-wrapper input[type=text] {
-  width: 90%;
-  border-bottom: 3px solid rgba(0, 0, 0, 0.3);
-  background-color: transparent;
-  outline: none;
 }
 
 .slide.kinderwagen .buggy-wrapper input[type=button] {
@@ -420,8 +420,6 @@ a {
   -ms-grid-column-span: 4;
   grid-column: 4 / span 4;
   background: inherit;
-  border: 0;
-  border-bottom: 8px solid white;
   height: 64px;
   font-size: 1.8em;
   font-family: 'IBM Plex Mono';
