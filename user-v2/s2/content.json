@@ -54,7 +54,7 @@
       "subtitle": "Session 02",
       "content": ["Wie würdest du das nächste mal vorgehen?", "Hast du eine Idee wie man deine Persona überprüfen könnte?"],
       "preventSlide": true,
-      "prev": "Zurück",
+      "prev": "",
       "next": "<a href='../s3'>Field Research</a>"
     }
   ]
