@@ -2,7 +2,7 @@
  * CREDITS: https://www.w3schools.com/howto/howto_js_autocomplete.asp
  */
 
-var countries = ["Bluetooth", "Regenschirm", "E-Motor", "Musik", "Fingerabdruckscanner", "Navigation", "Regenreifen", "Gurte", "Polsterung", "Leder", "Stoff"];
+var features = ["Bluetooth", "Badewasser", "Regenschirm", "E-Motor", "Musik", "Fingerabdruckscanner", "Navigation", "Regenreifen", "Gurte", "Polsterung", "Leder", "Stoff"];
 var local = localStorage;
 var featItems = [];
 
@@ -11,13 +11,13 @@ var array2;
 var list = $('#feat')
 var featNum;
 
-function submitSelection() {
-  var but, inp;
-  var inp = $('#myInput')
-  var but = $('#select')
+var but, inp;
+var inp = $('#myInput')
+var but = $('#select')
 
 
-  but.on('click', function () {
+but.on('click', function () {
+  if (inp.val() != "") {
     list.append("<li><span class='delete'>x</span><span class='text'>" + inp.val() + '</span></li>')
 
     updateList()
@@ -25,23 +25,21 @@ function submitSelection() {
 
     local.setItem('feat', JSON.stringify(featItems))
     inp.val("")
-  })
+  }
+})
 
-  list.on('click', '.delete', function () {
-    $(this).closest('li').remove();
-    updateList();
+list.on('click', '.delete', function () {
+  $(this).closest('li').remove();
+  updateList();
 
-    var text = $(this).next('.text').text();
+  var text = $(this).next('.text').text();
 
-    featItems = JSON.parse(local.getItem('feat'))
-    var ind = featItems.indexOf(text)
-    featItems.splice(ind, 1)
-    local.setItem('feat', JSON.stringify(featItems))
-  })
-
-
-
-}
+  featItems = JSON.parse(local.getItem('feat'))
+  var ind = featItems.indexOf(text)
+  featItems.splice(ind, 1)
+  features.push(text)
+  local.setItem('feat', JSON.stringify(featItems))
+})
 
 function updateList() {
   featNum = $('#feat').children().toArray();
@@ -134,7 +132,10 @@ function autocomplete(inp, arr) {
         a.appendChild(b);
       }
     }
+
   });
+
+  var allowSubmit = false;
   /*execute a function presses a key on the keyboard:*/
   inp.addEventListener("keydown", function (e) {
     var x = document.getElementById(this.id + "autocomplete-list");
@@ -151,14 +152,22 @@ function autocomplete(inp, arr) {
       currentFocus--;
       /*and and make the current item more visible:*/
       addActive(x);
-    } else if (e.keyCode == 13) {
+    } else if (e.keyCode == 13 && !allowSubmit) {
+      console.log("prevent");
       /*If the ENTER key is pressed, prevent the form from being submitted,*/
       e.preventDefault();
       if (currentFocus > -1) {
         /*and simulate a click on the "active" item:*/
         if (x) x[currentFocus].click();
+        allowSubmit = true;
       }
+    } else if (e.keyCode == 13 && allowSubmit) {
+      console.log("no prevent");
+      e.preventDefault();
+      but.click();
     }
+    console.log(allowSubmit);
+
   });
 
   function addActive(x) {

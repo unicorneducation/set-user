@@ -26,7 +26,7 @@
       "title": "Der Nutzer",
       "subtitle": "Session 01",
       "content": ["So eine Liste von Features ist wichtig um sich einen Scope zu setzen, der zeigt wo das Projekt am besten enden soll. Aber betrachte diese Liste doch mal genauer und achte dabei auf die Sinnhaftigkeit dieses Features und ob der spätere Nutzer dies wirklich benötigt.Wo wir bei der Frage sind: Wer ist eigentlich unserer späterer Nutzer ? ",
-        "Hast du dir bei der Erstellung der Liste darüber Gedanken gemacht, wer später den Kinderwagen benutzen wird? Eine einfache Aussage wie 'Mütter' zählt dabei nicht, da es unendlich verschiedene Persönlichkeiten gibt.",
+        "Hast du dir bei der Erstellung der Liste darüber Gedanken gemacht, wer später den Kinderwagen benutzen wird? Eine einfache Aussage wie 'Mütter' oder 'Väter' zählt dabei nicht, da es unendlich verschiedene Persönlichkeiten gibt.",
         "Versuche doch erst einmal festzuhalten, wie ein durchschnittlicher Nutzer aussehen könnte. Was motiviert ihn? Wie gestaltet sich sein Leben ? Für diesen Schritt gibt es Personas."
       ],
       "prevent": true,

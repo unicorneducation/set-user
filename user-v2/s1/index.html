@@ -68,7 +68,7 @@
                         </ul>
                     </div>
 
-                    <form autocomplete="off" class="auto-flex">
+                    <form autocomplete="off" class="auto-flex" action="">
                         <div class="autocomplete">
                             <input id="myInput" type="text" placeholder="Features">
                         </div>
@@ -85,9 +85,7 @@
     <script src="generator.js"></script>
     <script>
         $(function () {
-            autocomplete(document.getElementById("myInput"), countries);
-
-            submitSelection();
+            autocomplete(document.getElementById("myInput"), features);
         });
     </script>
 </body>
