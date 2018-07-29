@@ -374,6 +374,7 @@ a
     display: grid
     grid-template-columns: repeat(8, 1fr)
     grid-column-gap: 16px
+    grid-template-rows: 230px 50px auto
 
     .conversation 
         border: 5px solid #09305B
@@ -382,26 +383,45 @@ a
         margin-top: 64px       
 
     .npc 
-        grid-column: 2 / span 3
+        grid-column: 2 / span 5
         height: 160px
+        grid-row: 1
+
+    input[type=button] 
+        grid-row: 2
+        border: 1px solid #111
+        height: 45px
+        cursor: pointer
+        text-align: center
+        line-height: 32px
+        box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.09)
+        transition: 0.2s
+        padding: 0px 20px
+        color: #444
+        font-family: "IBM Plex Mono"
+        font-size: 21px
+        &#prevText
+            grid-column: 3 / span 2
+        &#nextText
+            grid-column: 5 / span 2
+
+
+    input[type=button]:hover 
+        margin-top: -2px
+        transition: 0.2s
+        box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.03)
+
+    input[type=button]:disabled
+        color: #d2d2d2
+        background-color: #e6e6e6
+        &:hover 
+            margin-top: 0
+            transition: none
+            box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.09)
 
     .player
-        grid-column: 5 / span 3
+        grid-column: 2 / span 5
         height: 160px
-
-        .next_questions
-            margin-top: 32px
-
-            item
-                width: 100%
-                display: block
-                background: white
-                border: 2px solid #09305B
-                padding: 8px 16px
-                margin-top: -8px
-                transition: all 0.2s
-                cursor: pointer
-
-                &:hover
-                    font-weight: 800
-                    transition: all 0.2s
+        font-family: "IBM Plex Mono"
+        font-size: 16px
+        grid-row: 3

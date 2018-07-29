@@ -16,9 +16,9 @@
       "title": "Der Nutzer",
       "subtitle": "Session 03",
       "content": ["Wie wär es mit einem kleinen Interview?",
-        "Du hast eine Mutter gefunden, die gerne mit dir über ihren Alltag sprechen will."        
+        "Du hast eine Mutter gefunden, die gerne mit dir über ihren Alltag sprechen will."
       ],
-      "prevent": false,
+      "prevent": true,
       "prev": "Zurück",
       "next": "Weiter"
     }
