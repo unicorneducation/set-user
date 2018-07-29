@@ -42,13 +42,91 @@
             <section class="slide">
                 <img src="src/FieldResearch-01.png">
             </section>
+            <section class="slide kinderwagen">
 
-            <section class="slide interview">
-                <div class="npc conversation"></div>
-                <input type="button" id="prevText" value="Zurück">
-                <input type="button" id="nextText" value="Weiter">
-                <textarea class="player conversation" id="notes" placeholder="Deine Notizen"></textarea>
+                <!--Make sure the form has the autocomplete function switched off:-->
+                <div class="buggy-wrapper">
+                    <div class="img-container">
+                        <img src="../s1/src/User_02.png">
+                    </div>
+                    <div class="list" id="features">
+                        <ul id="feat">
+                            <li>
+                                <span class="remain"></span>
+                            </li>
+                            <li>
+                                <span class="delete">x</span>
+                                <span class="text">Regenschutz</span>
+                            </li>
+                        </ul>
+                    </div>
 
+                    <form autocomplete="off" class="auto-flex">
+                        <div class="autocomplete">
+                            <input id="myInput" type="text" placeholder="Features">
+                        </div>
+                        <input type="button" id="select" value="Hinzufügen">
+                    </form>
+                </div>
+            </section>
+            <section class="slide persona">
+                <div class="main_picture" id="main_picture">
+
+                </div>
+                <ul id="persona_bilder">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </section>
+            <section class="slide persona">
+                <div class="image" id="bio_picture">
+
+                </div>
+                <input class="name" onchange="checkBio()" id="name" type="text" placeholder="Name" />
+
+                <div class="age">
+                    <input type="number" id="age" placeholder="XX" onchange="checkBio()" min="14" max="100" />
+                    <span>Jahre</span>
+                </div>
+                <div class="gender" id="genders" onchange="checkBio()">
+                    <item id="female">Weiblich</item>
+                    <item id="male">Männlich</item>
+                    <item id="other">
+                        <input type="text" id="inputOther" placeholder="Anders" />
+                    </item>
+                </div>
+                <div class="bio">
+                    <textarea id="persona_text" onchange="checkBio()" placeholder="Schreibe einen Text..."></textarea>
+                </div>
+            </section>
+
+            <section class="slide persona" onmouseover="checkBio()">
+                <div class="image" id="bio_2_picture">
+
+                </div>
+                <div id="bio_name" class="name">
+
+                </div>
+
+                <div class="age" id="bio_age">
+                </div>
+                <div class="gender" id="bio_gender">
+                </div>
+                <div class="bio">
+                    <div class="bio_text" id="bio_text"></div>
+                </div>
             </section>
             <div class="clear"></div>
         </section>
@@ -58,9 +136,9 @@
     <script>
     </script>
     <script src="../index.js"></script>
-    <script src="research.js"></script>
     <script src="../s1/generator.js"></script>
     <script src="../s2/persona.js"></script>
+    <script src=""></script>
     <script>
         $(function () {
             autocomplete(document.getElementById("myInput"), features);

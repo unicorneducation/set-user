@@ -56,6 +56,14 @@ function updateList() {
     $('.img-container img').attr('src', "../s1/src/Kinderwagen_5.png");
   }
 
+  var remain = 7 - featNum
+
+  if (remain <= 0) {
+    remain = 0;
+  }
+
+  $('.remain').html("Noch min. " + remain + " hinzufügen")
+
   if (featNum > 6) {
     toggleNext()
   }
@@ -80,9 +88,12 @@ function autocomplete(inp, arr) {
   the text field element and an array of possible autocompleted values:*/
   var currentFocus;
   /*execute a function when someone writes in the text field:*/
+  featNum = $('#feat').children().toArray();
 
   loadLocal()
-
+  if (featNum > 6) {
+    toggleNext()
+  }
   inp.addEventListener("input", function (e) {
     var a, b, i, val = this.value;
     /*close any already open lists of autocompleted values*/

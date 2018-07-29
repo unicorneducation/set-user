@@ -269,6 +269,10 @@ a {
   font-weight: bold;
 }
 
+.slide.kinderwagen .buggy-wrapper #feat .remain {
+  font-size: 14px;
+}
+
 .slide.kinderwagen .buggy-wrapper input[type=button] {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
@@ -485,6 +489,7 @@ a {
   border: 0;
   font-size: 16px;
   font-family: 'IBM Plex Mono';
+  font-weight: inherit;
 }
 
 .persona .bio {

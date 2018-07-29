@@ -66,6 +66,9 @@ function loadPage(num) {
           var reg = /<Name>/g;
           text = text.replace(reg, person.name)
           $('article').append('<p>' + text + '</p>')
+        } else if (text == "notes") {
+          var text = loadStorage('notes')
+          $('article').append('<p>' + text + '</p>')
         } else {
           $('article').append('<p>' + text + '</p>')
         }
@@ -137,6 +140,9 @@ function loadStorage(type) {
   } else if (type == "persona") {
     var persona = JSON.parse(local.getItem("persona"));
     return persona;
+  } else if (type == "notes") {
+    var notes = local.getItem('notes')
+    return notes;
   }
 
 }

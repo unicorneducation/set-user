@@ -14,9 +14,9 @@
       "page": 1,
       "title": "Der Nutzer",
       "subtitle": "Session 04",
-      "content": ["Deine Notizen:"],
-      "preventSlide": true,
-      "disableNext": true,
+      "content": ["Deine Notizen:", "notes"],
+      "preventSlide": false,
+      "disableNext": false,
       "prev": "Zurück",
       "next": "Weiter"
     },
@@ -24,14 +24,10 @@
       "page": 2,
       "title": "Der Nutzer",
       "subtitle": "Session 04",
-      "content": ["Mit den Informationen aus den Interviews lassen sich sehr gut Probleme und Anregungen herausfiltern, die die Nutzergruppe hat.",
-        "Basierend auf diesen Informationen müssen die Features des Kinderwagens als auch die Persona angepasst werden."
-      ],
-      "preventSlide": true,
-      "preventInput": true,
-      "disableNext": true,
-      "prev": "",
-      "next": "Anpassen"
+      "content": ["Das selbe machen wir jetzt noch mit der Persona:", "notes"],
+      "preventSlide": false,
+      "prev": "Zurück",
+      "next": "Weiter"
     }
   ]
 }
