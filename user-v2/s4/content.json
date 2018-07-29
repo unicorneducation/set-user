@@ -2,10 +2,9 @@
   "slides": [{
       "page": 0,
       "title": "Der Nutzer",
-      "subtitle": "Session 03",
-      "content": ["Es geht raus in Feld!",
-        "Als Designer ist es deine Aufgabe, dich in den tatsächlichen Nutzer hineinzuversetzen. Um deine Persona zu überprüfen solltest du dich jetzt mit richtigen Menschen aus deiner Zielgruppe unterhalten, und herausfinden was ihre wirkliche Motivation ist.",
-        "Ein kleiner Tipp: Der Nutzer weiß selber nicht was er will. Ja- & Nein-Fagen helfen dir nicht weiter. Wie erfährst du die wirklichen Bedürfnisse der Nutzer?"
+      "subtitle": "Session 04",
+      "content": ["Du hast nun viel neues gelernt über deinen Nutzer.",
+        "Das Neugelernte muss aber noch auf die Persona und den Kinderwagen übertragen werden. Dafür verwendest du einfach deine Notizen aus der vorherigen Session. "
       ],
       "preventSlide": false,
       "prev": "Zurück",
@@ -14,10 +13,8 @@
     {
       "page": 1,
       "title": "Der Nutzer",
-      "subtitle": "Session 03",
-      "content": ["Wie wär es mit einem kleinen Interview?",
-        "Du hast eine Mutter gefunden, die gerne mit dir über ihren Alltag sprechen will."
-      ],
+      "subtitle": "Session 04",
+      "content": ["Deine Notizen:"],
       "preventSlide": true,
       "disableNext": true,
       "prev": "Zurück",
@@ -26,7 +23,7 @@
     {
       "page": 2,
       "title": "Der Nutzer",
-      "subtitle": "Session 03",
+      "subtitle": "Session 04",
       "content": ["Mit den Informationen aus den Interviews lassen sich sehr gut Probleme und Anregungen herausfiltern, die die Nutzergruppe hat.",
         "Basierend auf diesen Informationen müssen die Features des Kinderwagens als auch die Persona angepasst werden."
       ],

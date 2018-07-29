@@ -31,7 +31,7 @@ function loadText(num) {
   if (textNum == maxText) {
     nextQ.hide();
     textNum = maxText;
-    disableNext = false
+    toggleNext()
   } else {
     nextQ.show();
   }
@@ -42,11 +42,6 @@ function loadText(num) {
     prevQ.show()
   }
 
-  if (disableNext) {
-    next.parent().hide()
-  } else {
-    next.parent().show()
-  }
 }
 
 nextQ.click(function () {

@@ -45,15 +45,19 @@ function updateList() {
   featNum = $('#feat').children().toArray();
   featNum = featNum.length
   if (featNum <= 2) {
-    $('.img-container img').attr('src', "src/Kinderwagen_1.png");
+    $('.img-container img').attr('src', "../s1/src/Kinderwagen_1.png");
   } else if (featNum >= 3 && featNum < 4) {
-    $('.img-container img').attr('src', "src/Kinderwagen_2.png");
+    $('.img-container img').attr('src', "../s1/src/Kinderwagen_2.png");
   } else if (featNum >= 4 && featNum < 5) {
-    $('.img-container img').attr('src', "src/Kinderwagen_3.png");
+    $('.img-container img').attr('src', "../s1/src/Kinderwagen_3.png");
   } else if (featNum >= 5 && featNum < 6) {
-    $('.img-container img').attr('src', "src/Kinderwagen_4.png");
+    $('.img-container img').attr('src', "../s1/src/Kinderwagen_4.png");
   } else if (featNum >= 6) {
-    $('.img-container img').attr('src', "src/Kinderwagen_5.png");
+    $('.img-container img').attr('src', "../s1/src/Kinderwagen_5.png");
+  }
+
+  if (featNum > 6) {
+    toggleNext()
   }
 }
 

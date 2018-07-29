@@ -39,6 +39,7 @@ function loadPage(num) {
     var subtitle = data.slides[num].subtitle
     preventSlide = data.slides[num].preventSlide
     preventInput = data.slides[num].preventInput || false
+    disableNext = data.slides[num].disableNext || false
     curPage = data.slides[num].page
     maxLength = data.slides.length - 1
     if (curPage > 0) {
@@ -109,13 +110,22 @@ function loadPage(num) {
       $('textarea').prop('disabled', false);
     }
 
-
+    if (disableNext) {
+      next.parent().hide()
+    } else {
+      next.parent().show()
+    }
 
     next.html(nextText)
     prev.html(prevText)
 
   })
 
+}
+
+function toggleNext() {
+  disableNext = false;
+  next.parent().show()
 }
 
 function loadStorage(type) {
