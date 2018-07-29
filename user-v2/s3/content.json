@@ -7,7 +7,7 @@
         "Als Designer ist es deine Aufgabe, dich in den tatsächlichen Nutzer hineinzuversetzen. Um deine Persona zu überprüfen solltest du dich jetzt mit richtigen Menschen aus deiner Zielgruppe unterhalten, und herausfinden was ihre wirkliche Motivation ist.",
         "Ein kleiner Tipp: Der Nutzer weiß selber nicht was er will. Ja- & Nein-Fagen helfen dir nicht weiter. Wie erfährst du die wirklichen Bedürfnisse der Nutzer?"
       ],
-      "prevent": false,
+      "preventSlide": false,
       "prev": "Zurück",
       "next": "Weiter"
     },
@@ -18,7 +18,19 @@
       "content": ["Wie wär es mit einem kleinen Interview?",
         "Du hast eine Mutter gefunden, die gerne mit dir über ihren Alltag sprechen will."
       ],
-      "prevent": true,
+      "preventSlide": true,
+      "prev": "Zurück",
+      "next": "Weiter"
+    },
+    {
+      "page": 2,
+      "title": "Der Nutzer",
+      "subtitle": "Session 03",
+      "content": ["Wie wär es mit einem kleinen Interview?",
+        "Du hast eine Mutter gefunden, die gerne mit dir über ihren Alltag sprechen will."
+      ],
+      "preventSlide": true,
+      "preventInput": true,
       "prev": "Zurück",
       "next": "Weiter"
     }

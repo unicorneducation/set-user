@@ -15,6 +15,8 @@ var preventSlide = false;
 var prevPreventSlide = false;
 var preventInput = false;
 
+var disableNext = true;
+
 if (getUrlParameter('p')) {
   var curSlide = getUrlParameter('p')
   slideUp(curSlide)
@@ -97,13 +99,17 @@ function loadPage(num) {
 
     if (preventInput) {
       $('input').prop('disabled', true);
+      $('textarea').prop('disabled', true);
 
       // Session 01 specific
       if ($('.delete')) $('.delete').remove();
 
     } else {
       $('input').prop('disabled', false);
+      $('textarea').prop('disabled', false);
     }
+
+
 
     next.html(nextText)
     prev.html(prevText)

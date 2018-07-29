@@ -20,7 +20,7 @@ input[type="text"] {
   outline: none;
 }
 
-input[type="text"]:disabled {
+input[type="text"]:disabled, textarea:disabled {
   color: #d2d2d2;
   background-color: #e6e6e6;
 }
@@ -133,6 +133,18 @@ a {
   transition: all 0.2s;
   -ms-grid-row-align: end;
       align-self: end;
+}
+
+.sidebar nav.disabled {
+  background-color: #d5d5d5;
+}
+
+.sidebar nav.disabled:hover {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  color: inherit;
+  -webkit-box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.04);
+          box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.04);
 }
 
 .sidebar nav:hover {
@@ -490,6 +502,10 @@ a {
 
 .interview {
   background: url("s3/src/Interview-01.png");
+  background-color: #fff;
+  background-size: 450px;
+  background-position: center bottom;
+  background-repeat: no-repeat;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[8];

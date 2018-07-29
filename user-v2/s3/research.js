@@ -1,5 +1,5 @@
-var next = $('#nextText')
-var prev = $('#prevText')
+var nextQ = $('#nextText')
+var prevQ = $('#prevText')
 var npcOutput = $('.npc')
 var textNum = 0;
 var maxText;
@@ -29,29 +29,34 @@ function loadText(num) {
   });
 
   if (textNum == maxText) {
-    next.hide();
+    nextQ.hide();
     textNum = maxText;
+    disableNext = false
   } else {
-    next.show();
-
+    nextQ.show();
   }
 
   if (textNum == 0) {
-    prev.hide();
+    prevQ.hide();
   } else {
-    prev.show();
+    prevQ.show()
+  }
 
+  if (disableNext) {
+    next.parent().hide()
+  } else {
+    next.parent().show()
   }
 }
 
-next.click(function () {
+nextQ.click(function () {
   if (textNum < maxText) {
     textNum++;
     loadText(textNum);
   }
 })
 
-prev.click(function () {
+prevQ.click(function () {
   if (textNum >= 0) {
     textNum--;
     loadText(textNum);

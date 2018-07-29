@@ -16,7 +16,7 @@ input[type="text"]
     background-color: transparent
     outline: none
 
-input[type="text"]:disabled
+input[type="text"]:disabled, textarea:disabled
     color: #d2d2d2
     background-color: #e6e6e6
 
@@ -99,6 +99,12 @@ a
         cursor: pointer        
         transition: all 0.2s
         align-self: end
+        &.disabled
+            background-color: #d5d5d5
+            &:hover
+                transform: translateY(0)
+                color: inherit
+                box-shadow: 4px 4px 0px rgba(0,0,0,0.04)
 
         &:hover
             transform: translateY(-4px)
@@ -131,6 +137,9 @@ a
             grid-column: 1 / span 2
         .right
             grid-column: 3 / span 2
+        
+        
+
 
 
 
@@ -371,6 +380,10 @@ a
 
 .interview 
     background: url('s3/src/Interview-01.png')
+    background-color: #fff
+    background-size: 450px 
+    background-position: center bottom
+    background-repeat: no-repeat
     display: grid
     grid-template-columns: repeat(8, 1fr)
     grid-column-gap: 16px
