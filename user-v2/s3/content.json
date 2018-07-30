@@ -16,7 +16,7 @@
       "title": "Der Nutzer",
       "subtitle": "Session 03",
       "content": ["Wie wär es mit einem kleinen Interview?",
-        "Du hast eine Mutter gefunden, die gerne mit dir über ihren Alltag sprechen will."
+        "Du hast eine Mutter gefunden, die gerne mit dir über ihren Alltag sprechen will.", "Versuche die wesentlichen Aussagen der Mutter festzuhalten und in den Notizen unten einzufügen. Diese werden später noch wichtig sein."
       ],
       "preventSlide": true,
       "disableNext": true,
@@ -28,13 +28,13 @@
       "title": "Der Nutzer",
       "subtitle": "Session 03",
       "content": ["Mit den Informationen aus den Interviews lassen sich sehr gut Probleme und Anregungen herausfiltern, die die Nutzergruppe hat.",
-        "Basierend auf diesen Informationen müssen die Features des Kinderwagens als auch die Persona angepasst werden."
+        "Basierend auf diesen Informationen müssen sowohl die Features des Kinderwagens als auch die Persona angepasst werden."
       ],
       "preventSlide": true,
       "preventInput": true,
       "disableNext": true,
       "prev": "",
-      "next": "Anpassen"
+      "next": "<a href='../s4'>Anpassen</a>"
     }
   ]
 }

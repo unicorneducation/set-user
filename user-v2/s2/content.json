@@ -45,7 +45,7 @@
       "subtitle": "Session 02",
       "content": ["Sehr gut!", "Schauen wir uns nochmal die Features von Session 1 an:", "featureList", "Findest du diese Features werden von <Name> wirklich benötigt?"],
       "preventSlide": true,
-      "prev": "<a href='../s1/index.html?p=1'>Nein</a>",
+      "prev": "Nein",
       "next": "Ja"
     },
     {

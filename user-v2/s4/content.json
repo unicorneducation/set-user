@@ -28,6 +28,15 @@
       "preventSlide": false,
       "prev": "Zurück",
       "next": "Weiter"
+    },
+    {
+      "page": 3,
+      "title": "Der Nutzer",
+      "subtitle": "Session 04",
+      "content": ["Du hast nun die Features und die Persona angepasst. Somit kennst du deinen Nutzer schon viel besser als vorher und dein Kinderwagen hat sich somit auch verbessert.", "In der nächsten Session geht es nun darum, wie man den Kinderwagen mittels Fomarlästhetik gestalten kann."],
+      "preventSlide": false,
+      "prev": "",
+      "next": "Fertig!"
     }
   ]
 }
