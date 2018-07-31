@@ -11,12 +11,12 @@ The first finished prototype is all about getting to know and understanding the 
 By making this Project Public it is our goal, to work with people together and to put effort into this project so we can slowly but steadily build up a platform for people who are interested in Design and how a Design process works. 
 
 ## What does this Repo contain?
-The folder `final` of the repo is our final and finished Prototype and all its Sessions. 
+The folder `finale` of the repo is our final and finished Prototype and all its Sessions. 
 
 The folder `previous` contains all of our previous versions and approaches. 
 
 ## Demo
-If you want to see a demo of the project you can visit: https://unicorneducation.github.io/set-user/
+If you want to see a demo of the project you can visit: https://unicorneducation.github.io/set-user/s1
 
 # Thank you
-A big Thank You goes to our lecturer [Garrit Schaap](https://github.com/pixelkind) for providing his time and knowledge and supporting us during this project.
+A big "Thank You" goes to our lecturer [Garrit Schaap](https://github.com/pixelkind) for providing his time and knowledge and supporting us during this project.
