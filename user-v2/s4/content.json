@@ -30,6 +30,15 @@
       "next": "Weiter"
     },
     {
+      "page": 4,
+      "title": "Der Nutzer",
+      "subtitle": "Session 04",
+      "content": ["Achte darauf, dass die Persona auf die Nutzergruppe passt. Dies ist wichtig, denn dadurch definierst du deine Nutzergruppe. Im nachfolgenden Designprozess wirst du dich immer aus der Sicht der Persona fragen, ob diese das auch möchte.", "notes"],
+      "preventSlide": false,
+      "prev": "Zurück",
+      "next": "Weiter"
+    },
+    {
       "page": 3,
       "title": "Der Nutzer",
       "subtitle": "Session 04",

@@ -58,8 +58,13 @@ function loadPage(num) {
         if (text == "featureList") {
           // load features from localStorage
           var feats = loadStorage("feat")
-          for (var item in feats) {
-            $('article').append('<p class="indent">' + feats[item] + '</p>')
+          if (feats != null) {
+            for (var item in feats) {
+              $('article').append('<p class="indent">' + feats[item] + '</p>')
+            }
+          } else {
+            $('article').append('<p class="indent">Leider hast du keine Features für den Kinderwagem definiert.</p>')
+
           }
         } else if (text.indexOf("<Name>") >= 0) {
           var person = loadStorage("persona")
@@ -68,7 +73,11 @@ function loadPage(num) {
           $('article').append('<p>' + text + '</p>')
         } else if (text == "notes") {
           var text = loadStorage('notes')
-          $('article').append('<p>' + text + '</p>')
+          if (text != null) {
+            $('article').append('<p>' + text + '</p>')
+          } else {
+            $('article').append('<p>Leider hast du keine Notizen gemacht. Gehe nochmal eine Session zurück um dir Notizen zu deinem Interviewpartner zu machen.</p>')
+          }
         } else {
           $('article').append('<p>' + text + '</p>')
         }

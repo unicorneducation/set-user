@@ -171,6 +171,13 @@ a {
   line-height: 64px;
 }
 
+.sidebar nav .nav_centered a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 64px;
+}
+
 .sidebar .single-nav {
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
@@ -271,6 +278,13 @@ a {
 
 .slide.kinderwagen .buggy-wrapper #feat .remain {
   font-size: 14px;
+}
+
+.slide.kinderwagen .buggy-wrapper #feat .text {
+  word-break: break-all;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }
 
 .slide.kinderwagen .buggy-wrapper input[type=button] {
