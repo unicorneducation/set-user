@@ -11,7 +11,7 @@ The first finished prototype is all about getting to know and understanding the 
 By making this Project Public it is our goal, to work with people together and to put effort into this project so we can slowly but steadily build up a platform for people who are interested in Design and how a Design process works. 
 
 ## What does this Repo contain?
-The folder `finale` of the repo is our final and finished Prototype and all its Sessions. 
+The folder `s1`, `s2`, `s3` and `s4` of the repo are all the session for this Set and the prototype. 
 
 The folder `previous` contains all of our previous versions and approaches. 
 
